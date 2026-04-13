@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deck Building | Biviano General Contracting — South Shore, MA</title>
+  <meta name="description" content="Premium deck construction built in 2–4 days. Free demo & permits. 20-year craftsmanship warranty. Approved Trex Pro Installer. Call 617-678-6446." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
+            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
+            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+          },
+          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .btn-gold:focus-visible { outline: 2px solid #e8b84b; outline-offset: 3px; }
+    .mobile-menu { display: none !important; }
+    .mobile-menu.open { display: flex !important; }
+  </style>
+</head>
+<body class="bg-stone-50 antialiased">
+
+<!-- NAV -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg>
+        </div>
+        <div class="leading-tight">
+          <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+          <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="service.html" class="text-gold-400 text-sm font-medium">Services</a>
+        <a href="testimonial.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Testimonials</a>
+        <a href="finance.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Financing</a>
+        <a href="about.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">About Us</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          617-678-6446
+        </a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+      </div>
+      <button id="menu-btn" class="lg:hidden text-white p-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
+    <a href="service.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Services</a>
+    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Testimonials</a>
+    <div class="pt-3">
+      <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[55vh] flex items-end overflow-hidden" style="padding-top:64px;">
+  <div class="absolute inset-0">
+    <img src="https://placehold.co/1920x800/162338/1e2f47?text=Deck+Construction" alt="Premium Deck Building" class="w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(13,21,32,0.5) 0%, rgba(13,21,32,0.9) 100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pb-16 w-full">
+    <div class="flex items-center gap-2 mb-4">
+      <a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a>
+      <span class="text-white/30 text-sm">/</span>
+      <span class="text-gold-400 text-sm font-medium">Decks</span>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="bg-gold-500 text-navy-950 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">20-Year Warranty</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">2–4 Day Builds</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">Free Demo &amp; Permits</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">Approved Trex Pro</span>
+    </div>
+    <h1 class="font-display text-5xl lg:text-6xl text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.05;">High-Quality Decks Built<br/><span class="text-gold-400">Fast, Clean, and Built to Last</span></h1>
+    <p class="text-white/70 text-lg max-w-2xl" style="line-height: 1.7;">From demolition to final inspection, Biviano GC manages every step. Premium materials. No drama. Done in 2–4 days.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="py-16 lg:py-24 bg-stone-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-12">
+
+      <!-- Main content -->
+      <div class="lg:col-span-2 space-y-12">
+
+        <!-- Intro -->
+        <div class="prose prose-lg max-w-none">
+          <p class="text-navy-700/70 text-base leading-relaxed" style="line-height:1.8;">
+            A new deck should enhance your home, last for decades, and be built without stress — and that's exactly what we deliver. Biviano General Contracting specializes in high-quality deck construction with fast 2–4 day build times, clean workmanship, and a streamlined process that takes the hassle off your plate.
+          </p>
+          <p class="text-navy-700/70 text-base leading-relaxed mt-4" style="line-height:1.8;">
+            From removing your old deck to handling permits, framing, decking, railings, and final inspections, our crew manages every step with precision and care. We use premium materials like Trex, TimberTech, and pressure-treated lumber, ensuring durability, safety, and long-term performance. With decades of local experience and hundreds of decks built across the South Shore, we're known for reliability, no-drama communication, and craftsmanship that truly stands out.
+          </p>
+        </div>
+
+        <!-- Why Choose -->
+        <div>
+          <h2 class="font-display text-3xl text-navy-900 mb-6" style="letter-spacing: -0.02em;">Why Choose Biviano GC for Your Deck?</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">Fast 2–4 day builds</div><div class="text-navy-700/55 text-xs mt-0.5">Minimal disruption to your home and schedule.</div></div>
+            </div>
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">Free demo &amp; permit handling</div><div class="text-navy-700/55 text-xs mt-0.5">We remove your old deck and pull all permits.</div></div>
+            </div>
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">20-year craftsmanship warranty</div><div class="text-navy-700/55 text-xs mt-0.5">20× longer than Massachusetts requires.</div></div>
+            </div>
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">Clean, professional crew</div><div class="text-navy-700/55 text-xs mt-0.5">We treat your home with care and respect.</div></div>
+            </div>
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">Premium materials only</div><div class="text-navy-700/55 text-xs mt-0.5">Trex, TimberTech, Fiberon &amp; pressure-treated.</div></div>
+            </div>
+            <div class="flex items-start gap-3 bg-white rounded-xl p-4" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a030" class="mt-0.5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><div class="font-semibold text-navy-900 text-sm">No-pressure estimates</div><div class="text-navy-700/55 text-xs mt-0.5">Honest pricing, no hidden fees, no upsells.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Warranty callout -->
+        <div class="bg-navy-900 rounded-2xl p-8 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" style="background: radial-gradient(circle at center, #e8b84b 0%, transparent 70%);"></div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/20 flex items-center justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-white" style="letter-spacing: -0.02em;">The 20-Year Craftsmanship Warranty</h3>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-4" style="line-height:1.75;">
+              Biviano GC offers a <strong class="text-gold-400">20-year craftsmanship warranty</strong> on every deck we build — not one year, not five, but twenty. That's twenty times longer than what Massachusetts requires, and we offer it because our decks are built to last.
+            </p>
+            <p class="text-white/60 text-sm leading-relaxed mb-4" style="line-height:1.75;">
+              Most contractors avoid long warranties because they rush jobs, cut corners, or use cheaper materials. We don't. We've lived and worked in Marshfield our entire lives, and our office is right in town. We stand behind our work because we're not going anywhere.
+            </p>
+            <p class="text-gold-400/80 text-sm font-medium italic">— Michael Biviano Jr., Owner</p>
+          </div>
+        </div>
+
+        <!-- Material Partners -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-lg bg-gold-500/15 flex items-center justify-center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-display text-xl text-navy-900" style="letter-spacing:-0.02em;">Approved Trex Pro Installer &amp; Material Partners</h3>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Trex Pro Installer</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">TimberTech</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Fiberon</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Dekorators</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Wolf</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Atlantis Cable Rails</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Key Link Rails</span>
+            <span class="text-navy-700/70 text-xs border border-stone-200 bg-white rounded-lg px-4 py-2.5 font-medium">Custom Electric Infrared Heaters</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+
+        <!-- CTA card -->
+        <div class="bg-navy-900 rounded-2xl p-6 sticky top-24">
+          <div class="text-gold-400/80 text-xs font-semibold uppercase tracking-wider mb-3">Ready to get started?</div>
+          <h3 class="font-display text-xl text-white mb-3" style="letter-spacing:-0.02em;">Get Your Free Deck Estimate</h3>
+          <p class="text-white/55 text-sm mb-5" style="line-height:1.7;">No commitment. We come to you, take measurements, and give you an honest quote.</p>
+          <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm py-3.5 rounded-xl mb-3">
+            Request Free Estimate →
+          </a>
+          <a href="tel:6176786446" class="block text-center border border-white/25 text-white font-semibold text-sm py-3.5 rounded-xl hover:border-white/50 transition-colors duration-150">
+            617-678-6446
+          </a>
+          <div class="mt-5 pt-5 border-t border-white/10 space-y-2">
+            <div class="flex items-center gap-2 text-white/50 text-xs">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Free demolition included
+            </div>
+            <div class="flex items-center gap-2 text-white/50 text-xs">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Permits handled by us
+            </div>
+            <div class="flex items-center gap-2 text-white/50 text-xs">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              20-year craftsmanship warranty
+            </div>
+            <div class="flex items-center gap-2 text-white/50 text-xs">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Financing available
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial snippet -->
+        <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+          <div class="flex mb-3">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-navy-800 text-sm leading-relaxed mb-4" style="line-height:1.7;">"We tried to get our deck replaced but no company would call us back. Then we went to Biviano. They were responsive, professional, and the deck came out beautifully."</p>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">RB</div>
+            <div class="text-navy-900 font-semibold text-xs">Robert Barrett</div>
+          </div>
+        </div>
+
+        <!-- Other services -->
+        <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+          <div class="text-navy-700/50 text-xs font-semibold uppercase tracking-wider mb-4">Other Services</div>
+          <ul class="space-y-2.5">
+            <li><a href="service-modular.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Custom Modular Homes</a></li>
+            <li><a href="service-adu.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Accessory Dwelling Units</a></li>
+            <li><a href="service-renovations.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Renovations &amp; Additions</a></li>
+            <li><a href="service-kitchen.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Kitchen &amp; Baths</a></li>
+            <li><a href="service-elevation.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>House Elevations</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (same as contact.html) -->
+<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+            <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+          </div>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">About Us</a></li>
+          <li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li>
+          <li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li>
+          <li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
+          <li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li>
+          <li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li>
+          <li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li>
+          <li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li>
+          <li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a></li>
+          <li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a></li>
+          <li class="text-white/50 text-sm">2183 Ocean Street, Marshfield, MA 02050</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
+      <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

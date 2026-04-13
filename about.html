@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Biviano General Contracting — 40+ Years on the South Shore</title>
+  <meta name="description" content="A fourth-generation Marshfield family builder since the 1960s. Michael Biviano Jr. carries on a legacy built on respect, fairness, honesty, quality, and pride." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
+            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
+            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+          },
+          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .mobile-menu { display: none !important; }
+    .mobile-menu.open { display: flex !important; }
+  </style>
+</head>
+<body class="bg-stone-50 antialiased">
+
+<!-- NAV -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg>
+        </div>
+        <div class="leading-tight">
+          <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+          <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="service.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Services</a>
+        <a href="testimonial.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Testimonials</a>
+        <a href="finance.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Financing</a>
+        <a href="about.html" class="text-gold-400 text-sm font-medium">About Us</a>
+        <a href="community.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Community</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150">617-678-6446</a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+      </div>
+      <button id="menu-btn" class="lg:hidden text-white p-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
+    <a href="service.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Services</a>
+    <a href="about.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">About Us</a>
+    <div class="pt-3"><a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 bg-navy-950 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 60%, #e8b84b 0%, transparent 55%);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">Our Story</p>
+    <h1 class="font-display text-5xl lg:text-6xl text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.05;">A Legacy of Local<br/><span class="text-gold-400">Craftsmanship</span></h1>
+    <p class="text-white/60 text-lg max-w-2xl" style="line-height: 1.7;">Four generations of Biviano builders have shaped the homes, neighborhoods, and community of the South Shore since the 1960s.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-navy-900 py-10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/15">
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl text-gold-400 font-bold" style="letter-spacing: -0.03em;">2K+</div>
+        <div class="text-white/55 text-sm mt-1">Happy Homeowners</div>
+      </div>
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl text-gold-400 font-bold" style="letter-spacing: -0.03em;">500+</div>
+        <div class="text-white/55 text-sm mt-1">Projects Completed</div>
+      </div>
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl text-gold-400 font-bold" style="letter-spacing: -0.03em;">40+</div>
+        <div class="text-white/55 text-sm mt-1">Years Building Here</div>
+      </div>
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl text-gold-400 font-bold" style="letter-spacing: -0.03em;">99%</div>
+        <div class="text-white/55 text-sm mt-1">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY SECTION -->
+<section class="py-20 lg:py-28 bg-stone-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      <div>
+        <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">The Biviano Family</p>
+        <h2 class="font-display text-4xl text-navy-900 mb-6" style="letter-spacing:-0.03em; line-height:1.1;">Building Marshfield<br/>Since the 1960s</h2>
+        <p class="text-navy-700/65 text-base leading-relaxed mb-5" style="line-height:1.8;">The Biviano family has been part of Marshfield's building and real estate community since the 1960s. What began as a family trade passed down through generations has grown into a trusted South Shore name for quality construction, renovations, modular homes, decks, and coastal elevation projects.</p>
+        <p class="text-navy-700/65 text-base leading-relaxed" style="line-height:1.8;">Owner Michael Biviano Jr. spent years working alongside his father, completing countless homes, additions, kitchens, decks, and structural projects across Marshfield, Duxbury, and Scituate. Today, he continues that legacy with a focus on professionalism, integrity, and lasting results.</p>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 24px 60px rgba(13,21,32,0.18);">
+          <img src="https://placehold.co/700x520/162338/243857?text=Michael+Biviano+Jr." alt="Michael Biviano Jr., Owner" class="w-full h-auto" />
+        </div>
+        <div class="absolute -bottom-5 -right-5 bg-white rounded-xl px-6 py-4" style="box-shadow:0 8px 32px rgba(13,21,32,0.14);">
+          <div class="font-display text-3xl text-navy-900 font-bold" style="letter-spacing:-0.03em;">4th</div>
+          <div class="text-navy-700/55 text-xs mt-0.5">Generation<br/>Builder</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values section -->
+    <div class="bg-navy-900 rounded-3xl p-10 lg:p-14 relative overflow-hidden mb-16">
+      <div class="absolute inset-0 opacity-10" style="background: radial-gradient(ellipse at 80% 20%, #e8b84b 0%, transparent 60%);"></div>
+      <div class="relative z-10 max-w-3xl mx-auto text-center">
+        <div class="font-display text-xl text-gold-400/80 mb-4 italic">"Mike Sr. (Dad) taught me everything I know."</div>
+        <p class="text-white/65 text-base leading-relaxed mb-8" style="line-height:1.8;">"From how to build, how to run a business, and how to deal with all the personalities involved. He showed me how to do it the right way."</p>
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span class="bg-gold-500/15 border border-gold-500/30 text-gold-400 text-sm font-semibold px-5 py-2 rounded-full">Respect</span>
+          <span class="bg-gold-500/15 border border-gold-500/30 text-gold-400 text-sm font-semibold px-5 py-2 rounded-full">Fairness</span>
+          <span class="bg-gold-500/15 border border-gold-500/30 text-gold-400 text-sm font-semibold px-5 py-2 rounded-full">Honesty</span>
+          <span class="bg-gold-500/15 border border-gold-500/30 text-gold-400 text-sm font-semibold px-5 py-2 rounded-full">Quality</span>
+          <span class="bg-gold-500/15 border border-gold-500/30 text-gold-400 text-sm font-semibold px-5 py-2 rounded-full">Pride in Our Work</span>
+        </div>
+        <p class="text-white/50 text-sm italic">"These aren't just values — they're who we are here at Biviano GC, and they're why we've been trusted in this community for so long."</p>
+        <p class="text-white/30 text-sm mt-3">RIP, we love you and miss you.</p>
+        <p class="text-gold-400/60 text-sm font-medium mt-4">— Michael Biviano Jr., Owner</p>
+      </div>
+    </div>
+
+    <!-- What makes us different -->
+    <div class="text-center mb-12">
+      <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">Your Vision. Our Craftsmanship.</p>
+      <h2 class="font-display text-4xl text-navy-900" style="letter-spacing:-0.03em;">How We Work</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6" style="box-shadow:0 2px 16px rgba(13,21,32,0.07);">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/15 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-display text-lg text-navy-900 mb-2" style="letter-spacing:-0.02em;">Full Project Management</h3>
+        <p class="text-navy-700/55 text-sm leading-relaxed" style="line-height:1.7;">From 2–4 day deck builds to full renovations and FEMA-approved elevations, we handle plans, permits, engineering, demo, and construction. You don't lift a finger.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6" style="box-shadow:0 2px 16px rgba(13,21,32,0.07);">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/15 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#d4a030"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <h3 class="font-display text-lg text-navy-900 mb-2" style="letter-spacing:-0.02em;">Clear Communication</h3>
+        <p class="text-navy-700/55 text-sm leading-relaxed" style="line-height:1.7;">Honest pricing, no hidden fees, and straightforward timelines from day one. We tell you exactly what to expect and we stick to it.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6" style="box-shadow:0 2px 16px rgba(13,21,32,0.07);">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/15 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#d4a030"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3 class="font-display text-lg text-navy-900 mb-2" style="letter-spacing:-0.02em;">Deep Local Knowledge</h3>
+        <p class="text-navy-700/55 text-sm leading-relaxed" style="line-height:1.7;">Decades of experience with South Shore zoning, coastal regulations, FEMA flood zones, and conservation requirements. We've seen it all — and know how to navigate it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-navy-950 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 50% 50%, #e8b84b 0%, transparent 60%);"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-5 lg:px-8 text-center">
+    <h2 class="font-display text-4xl lg:text-5xl text-white mb-5" style="letter-spacing:-0.03em;">Ready to Start Your Project?</h2>
+    <p class="text-white/60 text-lg mb-8" style="line-height:1.7;">Call us or fill out our form for a free, no-pressure estimate. We'll get back to you within 24 hours.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="contact.html" class="btn-gold text-navy-950 font-bold text-base px-8 py-4 rounded-lg text-center">Get Your Free Estimate →</a>
+      <a href="tel:6176786446" class="border-2 border-white/30 text-white font-semibold text-base px-8 py-4 rounded-lg text-center hover:border-white/60 transition-colors duration-150">617-678-6446</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div>
+          <div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">About Us</a></li>
+          <li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li>
+          <li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li>
+          <li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li>
+          <li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
+          <li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li>
+          <li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li>
+          <li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li>
+          <li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li>
+          <li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
+        <ul class="space-y-2.5">
+          <li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a></li>
+          <li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a></li>
+          <li class="text-white/50 text-sm">2183 Ocean Street, Marshfield, MA 02050</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
+      <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  document.getElementById('menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+</script>
+</body>
+</html>
