@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renovations & Additions | Biviano General Contracting — South Shore, MA</title>
+  <meta name="description" content="Renovations and additions done right. Carpentry, roofing, siding, windows, dormer additions, bedroom suites, sunrooms. Licensed and insured. Call 617-678-6446." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
+            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
+            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+          },
+          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .btn-gold:focus-visible { outline: 2px solid #e8b84b; outline-offset: 3px; }
+    .mobile-menu { display: none !important; }
+    .mobile-menu.open { display: flex !important; }
+    .dropdown { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
+    .dropdown-parent:hover .dropdown, .dropdown-parent:focus-within .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-stone-50 antialiased">
+
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div>
+        <div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <div class="dropdown-parent relative">
+          <a href="service.html" class="text-gold-400 text-sm font-medium flex items-center gap-1 py-5">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dropdown absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 w-56">
+            <div class="bg-navy-900 rounded-xl border border-white/10 py-2" style="box-shadow:0 20px 48px rgba(0,0,0,0.45);">
+              <a href="service-modular.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
+              <a href="service-decks.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Decks</span></a>
+              <a href="service-adu.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Accessory Dwelling Units</span></a>
+              <a href="service-renovations.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-gold-400 text-sm font-medium">Renovations &amp; Additions</span></a>
+              <a href="service-kitchen.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Kitchen &amp; Baths</span></a>
+              <a href="service-elevation.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">House Elevations</span></a>
+              <a href="service-small.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Small Projects</span></a>
+            </div>
+          </div>
+        </div>
+        <a href="testimonial.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Testimonials</a>
+        <a href="finance.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Financing</a>
+        <a href="about.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">About Us</a>
+        <a href="community.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Community</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>617-678-6446</a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+      </div>
+      <button id="menu-btn" class="lg:hidden text-white p-2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
+    <div class="text-white/50 text-xs uppercase tracking-wider pt-2 pb-1">Services</div>
+    <a href="service-modular.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
+    <a href="service-decks.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Decks</a>
+    <a href="service-adu.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Accessory Dwelling Units</a>
+    <a href="service-renovations.html" class="text-gold-400 py-2 pl-3 text-sm block border-l border-gold-500/50 font-medium">Renovations &amp; Additions</a>
+    <a href="service-kitchen.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Kitchen &amp; Baths</a>
+    <a href="service-elevation.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">House Elevations</a>
+    <a href="service-small.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20 mb-2">Small Projects</a>
+    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-t border-white/10 block">Testimonials</a>
+    <a href="finance.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Financing</a>
+    <a href="about.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">About Us</a>
+    <a href="community.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Community</a>
+    <div class="pt-3 flex flex-col gap-2">
+      <a href="tel:6176786446" class="block text-center border-2 border-white/30 text-white font-semibold text-sm px-5 py-3 rounded-md">Call: 617-678-6446</a>
+      <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a>
+    </div>
+  </div>
+</nav>
+
+<section class="relative min-h-[55vh] flex items-end overflow-hidden" style="padding-top:64px;">
+  <div class="absolute inset-0">
+    <img src="https://placehold.co/1920x800/162338/1e2f47?text=Renovations+%26+Additions" alt="Renovations and Additions" class="w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(13,21,32,0.5) 0%, rgba(13,21,32,0.9) 100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pb-16 w-full">
+    <div class="flex items-center gap-2 mb-4">
+      <a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a>
+      <span class="text-white/30 text-sm">/</span>
+      <span class="text-gold-400 text-sm font-medium">Renovations &amp; Additions</span>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="bg-gold-500 text-navy-950 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">20-Year Warranty</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">Full Design-Build</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">Permits Included</span>
+      <span class="bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full">Interior &amp; Exterior</span>
+    </div>
+    <h1 class="font-display text-5xl lg:text-6xl text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.05;">Transform Your Home —<br/><span class="text-gold-400">More Space, More Value</span></h1>
+    <p class="text-white/70 text-lg max-w-2xl" style="line-height: 1.7;">From a fresh exterior to a full addition, Biviano GC handles renovations of every scope — clean, professional, on time.</p>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-stone-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-12">
+
+        <div>
+          <p class="text-navy-700/70 text-base leading-relaxed" style="line-height:1.8;">Your home should grow with you. Whether you need more space for a growing family, a refreshed exterior that stands out in the neighborhood, or a full room addition that transforms how you live — Biviano General Contracting has been delivering high-quality renovations and additions on the South Shore for over 40 years.</p>
+          <p class="text-navy-700/70 text-base leading-relaxed mt-4" style="line-height:1.8;">We're a design-build contractor, which means you work with one team from concept to completion. No miscommunication between an architect and a builder. No finger-pointing when something goes wrong. One point of contact, clear communication, and work you'll be proud of for decades.</p>
+        </div>
+
+        <!-- Two columns: Renovations + Additions -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-8 h-8 rounded-lg bg-gold-500/15 flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <h2 class="font-display text-xl text-navy-900" style="letter-spacing:-0.02em;">Renovations</h2>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>General carpentry &amp; framing</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Windows &amp; exterior doors</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Roofing &amp; gutters</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Siding replacement &amp; repairs</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Insulation &amp; air sealing</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>New flooring installation</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Drywall &amp; plaster</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Trim, moldings &amp; millwork</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Interior &amp; exterior painting</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-8 h-8 rounded-lg bg-gold-500/15 flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <h2 class="font-display text-xl text-navy-900" style="letter-spacing:-0.02em;">Additions</h2>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Master bedroom suites</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>In-law apartments</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Garage conversions</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Dormer additions</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Raised ceilings &amp; vaulting</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Sunroom &amp; mudroom additions</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Second-floor additions</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Bonus room buildouts</li>
+              <li class="flex items-center gap-2 text-navy-700/70 text-sm"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0"></div>Deck &amp; porch additions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-navy-900 rounded-2xl p-8 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" style="background: radial-gradient(circle at center, #e8b84b 0%, transparent 70%);"></div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/20 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+              <h3 class="font-display text-2xl text-white" style="letter-spacing: -0.02em;">One Team. No Handoffs.</h3>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-4" style="line-height:1.75;">Too many homeowners get burned by the disconnect between designer and builder. They get a beautiful design they can't afford to build, or a builder who changes things mid-project because the plans weren't practical. With Biviano GC, <strong class="text-gold-400">design and construction are one team</strong>. That means plans you can actually build to budget, and a finished result that matches what you approved.</p>
+            <p class="text-gold-400/80 text-sm font-medium italic">— Michael Biviano Jr., Owner</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-navy-900 rounded-2xl p-6 sticky top-24">
+          <div class="text-gold-400/80 text-xs font-semibold uppercase tracking-wider mb-3">Ready to get started?</div>
+          <h3 class="font-display text-xl text-white mb-3" style="letter-spacing:-0.02em;">Get Your Free Renovation Estimate</h3>
+          <p class="text-white/55 text-sm mb-5" style="line-height:1.7;">Tell us what you're thinking and we'll come out, take a look, and give you an honest assessment.</p>
+          <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm py-3.5 rounded-xl mb-3">Request Free Estimate →</a>
+          <a href="tel:6176786446" class="block text-center border border-white/25 text-white font-semibold text-sm py-3.5 rounded-xl hover:border-white/50 transition-colors duration-150">617-678-6446</a>
+          <div class="mt-5 pt-5 border-t border-white/10 space-y-2">
+            <div class="flex items-center gap-2 text-white/50 text-xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Full design-build service</div>
+            <div class="flex items-center gap-2 text-white/50 text-xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Permits handled by us</div>
+            <div class="flex items-center gap-2 text-white/50 text-xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>20-year craftsmanship warranty</div>
+            <div class="flex items-center gap-2 text-white/50 text-xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Financing available</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+          <div class="flex mb-3">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-navy-800 text-sm leading-relaxed mb-4" style="line-height:1.7;">"Biviano added a full master suite to our home. The team was professional, respectful of our space, and the work was absolutely top-notch. It looks like it was always part of the house."</p>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">SR</div>
+            <div class="text-navy-900 font-semibold text-xs">Susan R.</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+          <div class="text-navy-700/50 text-xs font-semibold uppercase tracking-wider mb-4">Other Services</div>
+          <ul class="space-y-2.5">
+            <li><a href="service-modular.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Custom Modular Homes</a></li>
+            <li><a href="service-decks.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Decks</a></li>
+            <li><a href="service-adu.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Accessory Dwelling Units</a></li>
+            <li><a href="service-kitchen.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Kitchen &amp; Baths</a></li>
+            <li><a href="service-elevation.html" class="text-navy-700/70 hover:text-gold-600 text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>House Elevations</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-navy-950/98 border-t border-white/10 px-4 py-3 flex gap-3">
+  <a href="tel:6176786446" class="flex-1 text-center border border-white/30 text-white font-semibold text-sm py-3 rounded-lg">Call Now</a>
+  <a href="contact.html" class="flex-1 btn-gold text-center text-navy-950 font-bold text-sm py-3 rounded-lg">Free Estimate</a>
+</div>
+
+<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-24 lg:pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4"><div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div><div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div></div>
+        <p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+      </div>
+      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">About Us</a></li><li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li><li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li><li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li><li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li><li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4><ul class="space-y-2.5"><li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li><li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li><li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li><li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li><li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li><li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li><li><a href="service-small.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Small Projects</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4><ul class="space-y-3"><li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a></li><li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a></li><li class="text-white/50 text-sm">2183 Ocean Street, Marshfield, MA 02050</li></ul></div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
+      <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  document.getElementById('menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+</script>
+</body>
+</html>
