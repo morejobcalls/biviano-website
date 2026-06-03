@@ -3,52 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Biviano General Contracting — Free Estimate</title>
-  <meta name="description" content="Get a free estimate from Biviano General Contracting. Call 617-678-6446 or fill out our form. Licensed, insured, and trusted for 40+ years on the South Shore." />
+  <title>Contact | Biviano General Contracting — Marshfield, MA South Shore Builder</title>
+  <meta name="description" content="Get in touch with Biviano General Contracting. Call 617-678-6446, email mbiviano@hotmail.com, or visit us at 2183 Ocean Street, Marshfield, MA. Free consultations for South Shore homeowners." />
+  <link rel="icon" type="image/png" href="assets/brand/favicon-dark.png" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-dark.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Biviano General Contracting" />
+  <meta property="og:title" content="Contact | Biviano General Contracting — Marshfield, MA South Shore Builder" />
+  <meta property="og:description" content="Get in touch with Biviano General Contracting. Call 617-678-6446, email mbiviano@hotmail.com, or visit us at 2183 Ocean Street, Marshfield, MA. Free consultations for South Shore homeowners." />
+  <meta property="og:url" content="https://www.bivianocontracting.com/contact.html" />
+  <meta property="og:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Biviano General Contracting — Marshfield, MA South Shore Builder" />
+  <meta name="twitter:description" content="Get in touch with Biviano General Contracting. Call 617-678-6446, email mbiviano@hotmail.com, or visit us at 2183 Ocean Street, Marshfield, MA. Free consultations for South Shore homeowners." />
+  <meta name="twitter:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
-            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
-            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+            navy: {
+              950: '#0d1520',
+              900: '#111d2e',
+              800: '#162338',
+              700: '#1e2f47',
+              600: '#243857',
+            },
+            gold: {
+              300: '#f0c96a',
+              400: '#e8b84b',
+              500: '#d4a030',
+              600: '#b8861e',
+            },
+            stone: {
+              50:  '#f9f7f3',
+              100: '#f2ede4',
+              200: '#e5dccf',
+            }
           },
-          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            tightest: '-0.04em',
+            tighter: '-0.03em',
+          }
         }
       }
     }
   </script>
   <style>
     * { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* Grain texture overlay */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Nav transition */
     #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
     #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
-    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
+
+    /* Button hover states */
+    .btn-gold {
+      background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      box-shadow: 0 4px 20px rgba(212,160,48,0.35);
+    }
     .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 8px 28px rgba(212,160,48,0.45); }
+    .btn-gold:active { transform: translateY(0); }
     .btn-gold:focus-visible { outline: 2px solid #e8b84b; outline-offset: 3px; }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+    .btn-navy {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 16px rgba(13,21,32,0.3);
+    }
+    .btn-navy:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,21,32,0.4); }
+    .btn-navy:active { transform: translateY(0); }
+    .btn-navy:focus-visible { outline: 2px solid #111d2e; outline-offset: 3px; }
+
+    /* Service card hover */
+    .service-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 12px rgba(13,21,32,0.08), 0 1px 4px rgba(13,21,32,0.06);
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,21,32,0.14), 0 4px 12px rgba(13,21,32,0.08); }
+    .service-card:focus-within { outline: 2px solid #d4a030; outline-offset: 2px; }
+
+    /* Testimonial card */
+    .testimonial-card {
+      box-shadow: 0 2px 16px rgba(13,21,32,0.07), 0 1px 4px rgba(13,21,32,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,21,32,0.12), 0 4px 12px rgba(13,21,32,0.08); }
+
+    /* Step number glow */
+    .step-number { text-shadow: 0 0 40px rgba(212,160,48,0.3); }
+
+    /* Scroll reveal — applied by JS after page load */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Phone pulse */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(212,160,48,0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(212,160,48,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,160,48,0); }
+    }
+    .phone-pulse { animation: pulse-ring 2s ease infinite; }
+
+    /* Gold underline accent */
+    .gold-underline { position: relative; display: inline-block; }
+    .gold-underline::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #e8b84b, #d4a030);
+      border-radius: 2px;
+    }
+
+    /* Mobile menu: hidden by default, shown when .open is toggled */
     .mobile-menu { display: none !important; }
     .mobile-menu.open { display: flex !important; }
+    @media (min-width: 1024px) {
+      .mobile-menu { display: none !important; }
+    }
+
+    /* Services dropdown */
     .dropdown { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
     .dropdown-parent:hover .dropdown, .dropdown-parent:focus-within .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+
+    /* Counter animation */
+    .counter { transition: all 0.1s ease; }
+
+    /* Floating CTA bar */
+    #floating-cta {
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    #floating-cta.show { transform: translateY(0); }
   </style>
 </head>
-<body class="bg-stone-50 antialiased">
+<body class="bg-stone-50 text-navy-900 antialiased">
 
-<!-- NAV -->
+<!-- ============================================================
+     STICKY NAVIGATION
+     ============================================================ -->
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg>
-        </div>
+    <div class="flex items-center justify-between h-16 lg:h-18">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Biviano General Contracting Home">
+        <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" style="transition: transform 0.15s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" />
         <div class="leading-tight">
           <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
           <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
         </div>
       </a>
+
+      <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-6">
         <div class="dropdown-parent relative">
           <a href="service.html" class="text-white/75 hover:text-white text-sm font-medium flex items-center gap-1 py-5">
@@ -56,7 +195,7 @@
           </a>
           <div class="dropdown absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 w-56">
             <div class="bg-navy-900 rounded-xl border border-white/10 py-2" style="box-shadow:0 20px 48px rgba(0,0,0,0.45);">
-              <a href="service-modular.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
+              <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
               <a href="service-decks.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Decks</span></a>
               <a href="service-adu.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Accessory Dwelling Units</span></a>
               <a href="service-renovations.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Renovations &amp; Additions</span></a>
@@ -71,230 +210,286 @@
         <a href="about.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">About Us</a>
         <a href="community.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Community</a>
       </div>
+
+      <!-- Desktop CTA -->
       <div class="hidden lg:flex items-center gap-3">
         <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-2">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
           617-678-6446
         </a>
-        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">
+          Get My Free Estimate
+        </a>
       </div>
-      <button id="menu-btn" class="lg:hidden text-white p-2">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
       </button>
     </div>
   </div>
+
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
     <div class="text-white/50 text-xs uppercase tracking-wider pt-2 pb-1">Services</div>
-    <a href="service-modular.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
+    <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
     <a href="service-decks.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Decks</a>
     <a href="service-adu.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Accessory Dwelling Units</a>
     <a href="service-renovations.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Renovations &amp; Additions</a>
     <a href="service-kitchen.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Kitchen &amp; Baths</a>
     <a href="service-elevation.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">House Elevations</a>
     <a href="service-small.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20 mb-2">Small Projects</a>
-    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-t border-white/10 block">Testimonials</a>
+    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Testimonials</a>
     <a href="finance.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Financing</a>
     <a href="about.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">About Us</a>
     <a href="community.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Community</a>
     <div class="pt-3 flex flex-col gap-2">
-      <a href="tel:6176786446" class="block text-center border-2 border-white/30 text-white font-semibold text-sm px-5 py-3 rounded-md">Call: 617-678-6446</a>
-      <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a>
+      <a href="tel:6176786446" class="btn-outline text-white font-semibold text-sm px-5 py-3 rounded-md text-center">Call: 617-678-6446</a>
+      <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-3 rounded-md text-center">Get My Free Estimate</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="pt-32 pb-16 bg-navy-950 relative overflow-hidden">
-  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 70% 30%, #e8b84b 0%, transparent 55%);"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 text-center">
-    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">Free No-Pressure Consultation</p>
-    <h1 class="font-display text-5xl lg:text-6xl text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">Let's Talk About<br/>Your Project</h1>
-    <p class="text-white/60 text-lg max-w-xl mx-auto" style="line-height: 1.7;">Whether it's a deck, a full renovation, or a new modular home — reach out and we'll figure out the best path forward together.</p>
+
+<!-- ============================================================
+     INTERIOR HERO
+     ============================================================ -->
+<section class="relative grain overflow-hidden" style="padding-top:64px;">
+  <div class="absolute inset-0">
+    <img src="assets/images/KoeDLgslQDz4vrvbrw5ecNcDJc-23964a06.jpg" alt="A Biviano General Contracting project on the South Shore of Massachusetts" class="w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(13,21,32,0.94) 0%,rgba(13,21,32,0.80) 50%,rgba(22,35,56,0.68) 100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-3">Get In Touch</p>
+    <h1 class="font-display text-4xl lg:text-6xl text-white mb-4" style="letter-spacing:-0.03em">Let's Talk About Your Project</h1>
+    <p class="text-white/75 text-lg max-w-2xl" style="line-height:1.7">Whether you decide to proceed with a single job or use our discount on multiple projects, we take the worry out of home improvements from start to finish.</p>
   </div>
 </section>
 
-<!-- MAIN CONTACT SECTION -->
-<section class="py-16 lg:py-24 bg-stone-50">
+
+<!-- ============================================================
+     CONTACT INFO + FORM
+     ============================================================ -->
+<section id="contact-form" class="py-20 lg:py-28 bg-stone-50">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-5 gap-12 items-start">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-      <!-- Left: Contact info + trust signals -->
-      <div class="lg:col-span-2 space-y-8">
+      <!-- Left: Contact information -->
+      <div class="reveal">
+        <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">Contact Information</p>
+        <h2 class="font-display text-3xl lg:text-4xl text-navy-900 mb-5" style="letter-spacing:-0.03em">We're Here to Help</h2>
+        <p class="text-navy-700/65 text-base leading-relaxed mb-10" style="line-height:1.75;">
+          Whether you decide to proceed with a single job or use our discount on multiple projects, we take the worry out of home improvements from start to finish. Reach out and we'll get back to you within 24 hours.
+        </p>
 
-        <div>
-          <h2 class="font-display text-2xl text-navy-900 mb-6" style="letter-spacing: -0.02em;">Reach Us Directly</h2>
-          <div class="space-y-5">
-            <a href="tel:6176786446" class="flex items-start gap-4 group p-4 rounded-xl hover:bg-white transition-colors duration-150" style="box-shadow: none;">
-              <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-              </div>
-              <div>
-                <div class="text-navy-700/60 text-xs font-semibold uppercase tracking-wider mb-0.5">Call or Text</div>
-                <div class="text-navy-900 font-bold text-xl group-hover:text-gold-600 transition-colors duration-150">617-678-6446</div>
-                <div class="text-navy-700/50 text-xs mt-0.5">Best way to reach us fast</div>
-              </div>
-            </a>
-            <a href="mailto:mbiviano@hotmail.com" class="flex items-start gap-4 group p-4 rounded-xl hover:bg-white transition-colors duration-150">
-              <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              </div>
-              <div>
-                <div class="text-navy-700/60 text-xs font-semibold uppercase tracking-wider mb-0.5">Email</div>
-                <div class="text-navy-900 font-semibold text-base group-hover:text-gold-600 transition-colors duration-150">mbiviano@hotmail.com</div>
-              </div>
-            </a>
-            <div class="flex items-start gap-4 p-4">
-              <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              </div>
-              <div>
-                <div class="text-navy-700/60 text-xs font-semibold uppercase tracking-wider mb-0.5">Office</div>
-                <div class="text-navy-900 font-semibold text-sm">2183 Ocean Street<br/>Marshfield, MA 02050</div>
-              </div>
+        <div class="space-y-5 mb-10">
+          <!-- Phone -->
+          <a href="tel:6176786446" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500 transition-colors duration-150">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b" class="group-hover:hidden"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1520" class="hidden group-hover:block"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div>
+              <div class="text-navy-700/50 text-xs font-medium uppercase tracking-wider">Call or Text</div>
+              <div class="text-navy-900 font-semibold text-base group-hover:text-gold-600 transition-colors duration-150">617-678-6446</div>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:mbiviano@hotmail.com" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500 transition-colors duration-150">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b" class="group-hover:hidden"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1520" class="hidden group-hover:block"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <div class="text-navy-700/50 text-xs font-medium uppercase tracking-wider">Email</div>
+              <div class="text-navy-900 font-semibold text-base group-hover:text-gold-600 transition-colors duration-150">mbiviano@hotmail.com</div>
+            </div>
+          </a>
+
+          <!-- Address -->
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="text-navy-700/50 text-xs font-medium uppercase tracking-wider">Office</div>
+              <div class="text-navy-900 font-semibold text-base">2183 Ocean Street, Marshfield, MA 02050</div>
             </div>
           </div>
         </div>
 
-        <!-- Map -->
-        <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,21,32,0.1);">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.1!2d-70.7!3d42.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDA2JzAwLjAiTiA3MMKwNDInMDAuMCJX!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+        <!-- Trust line -->
+        <div class="flex items-center gap-3 bg-white rounded-xl p-4" style="box-shadow:0 2px 16px rgba(13,21,32,0.07);">
+          <div class="flex">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-navy-700/70 text-sm font-medium">5-Star Rated · Trusted on the South Shore for 40+ Years</span>
         </div>
-
-        <!-- Trust signals -->
-        <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 2px 12px rgba(13,21,32,0.07);">
-          <div class="text-navy-700/50 text-xs font-semibold uppercase tracking-wider mb-4">Why Choose Biviano GC</div>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Licensed &amp; insured in Massachusetts
-            </li>
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              40+ years building the South Shore
-            </li>
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Free, no-pressure estimates
-            </li>
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              We handle permits &amp; engineering
-            </li>
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Financing available through Enhancify
-            </li>
-            <li class="flex items-center gap-3 text-navy-800 text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a030"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              5-star rated on Google, Yelp &amp; HomeAdvisor
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      <!-- Right: Form -->
-      <div class="lg:col-span-3">
-        <div class="bg-white rounded-2xl p-8 lg:p-10" style="box-shadow: 0 8px 40px rgba(13,21,32,0.1);">
-          <h2 class="font-display text-2xl text-navy-900 mb-1" style="letter-spacing: -0.02em;">Schedule a Free Consultation</h2>
-          <p class="text-navy-700/55 text-sm mb-8">We'll respond within 24 hours, usually much sooner.</p>
+      <!-- Right: Leave a message form -->
+      <div class="bg-white rounded-2xl p-7 lg:p-8 reveal" style="box-shadow: 0 24px 60px rgba(13,21,32,0.14);">
+        <h3 class="font-display text-2xl text-navy-900 mb-1" style="letter-spacing: -0.02em;">Leave a Message</h3>
+        <p class="text-navy-700/55 text-sm mb-6">Tell us about your project and we'll be in touch shortly.</p>
 
-          <form action="#" method="post" class="space-y-5">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">First Name *</label>
-                <input type="text" name="first_name" required placeholder="John"
-                  class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150" />
-              </div>
-              <div>
-                <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Last Name *</label>
-                <input type="text" name="last_name" required placeholder="Smith"
-                  class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150" />
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Phone Number *</label>
-                <input type="tel" name="phone" required placeholder="(617) 555-0100"
-                  class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150" />
-              </div>
-              <div>
-                <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Email Address *</label>
-                <input type="email" name="email" required placeholder="john@email.com"
-                  class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150" />
-              </div>
+        <form action="#" method="post" class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">First Name</label>
+              <input type="text" name="first_name" required placeholder="John"
+                class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
             </div>
             <div>
-              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Project Type *</label>
-              <select name="project_type" required
-                class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150 bg-white">
-                <option value="">Select a service...</option>
-                <option>Custom Modular Home</option>
-                <option>Deck</option>
-                <option>Accessory Dwelling Unit (ADU)</option>
-                <option>Renovation &amp; Addition</option>
-                <option>Kitchen &amp; Bath</option>
-                <option>House Elevation</option>
-                <option>Small Project / Repair</option>
-                <option>Other</option>
-              </select>
+              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Last Name</label>
+              <input type="text" name="last_name" required placeholder="Smith"
+                class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
             </div>
-            <div>
-              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Property Address</label>
-              <input type="text" name="address" placeholder="123 Main St, Marshfield, MA"
-                class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150" />
-            </div>
-            <div>
-              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">Tell Us About Your Project</label>
-              <textarea name="message" rows="4" placeholder="What are you looking to build or renovate? Any relevant details about timeline, budget range, or current situation help us prepare..."
-                class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150 resize-none"></textarea>
-            </div>
-            <div>
-              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-2">How Did You Hear About Us?</label>
-              <select name="referral"
-                class="w-full border border-stone-200 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/15 transition-all duration-150 bg-white">
-                <option value="">Select...</option>
-                <option>Google</option>
-                <option>Yelp</option>
-                <option>HomeAdvisor</option>
-                <option>Facebook</option>
-                <option>Referral from friend/neighbor</option>
-                <option>Saw work in my neighborhood</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-gold w-full text-navy-950 font-bold text-base py-4 rounded-xl">
-              Request My Free Estimate →
-            </button>
-            <p class="text-navy-700/40 text-xs text-center">No commitment required. We'll respond within 24 hours.</p>
-          </form>
-        </div>
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Phone Number</label>
+            <input type="tel" name="phone" required placeholder="(617) 555-0100"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Email Address</label>
+            <input type="email" name="email" required placeholder="john@email.com"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Choose A Service</label>
+            <select name="project_type"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150 bg-white">
+              <option value="">Select a service...</option>
+              <option>ADU</option>
+              <option>Custom Modular Home</option>
+              <option>Decks</option>
+              <option>Renovations &amp; Additions</option>
+              <option>Kitchen &amp; Baths</option>
+              <option>House Elevation</option>
+              <option>Small Projects</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Your Message</label>
+            <textarea name="message" rows="4" placeholder="Brief description of what you're looking to build or renovate..."
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150 resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-gold w-full text-navy-950 font-bold text-base py-4 rounded-lg">
+            Get My Free Estimate →
+          </button>
+          <p class="text-navy-700/40 text-xs text-center">No commitment. No spam. We'll respond within 24 hours.</p>
+        </form>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-8">
+
+<!-- ============================================================
+     OUR LOCATION (map)
+     ============================================================ -->
+<section class="py-20 lg:py-28 bg-white border-y border-stone-200">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg>
-          </div>
+    <div class="text-center mb-12 reveal">
+      <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">Find Us</p>
+      <h2 class="font-display text-4xl lg:text-5xl text-navy-900 mb-4" style="letter-spacing:-0.03em">Our Location</h2>
+      <p class="text-navy-700/60 text-lg max-w-xl mx-auto" style="line-height:1.7">Right here in Marshfield — and here to stay. Stop by or give us a call.</p>
+    </div>
+    <div class="rounded-2xl overflow-hidden reveal" style="box-shadow: 0 16px 48px rgba(13,21,32,0.12);">
+      <iframe
+        title="Biviano General Contracting — 2183 Ocean Street, Marshfield, MA 02050"
+        src="https://www.google.com/maps?q=2183+Ocean+Street,+Marshfield,+MA+02050&output=embed"
+        width="100%" height="440" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="text-center mt-6">
+      <p class="text-navy-800 font-semibold text-base">2183 Ocean Street, Marshfield, Massachusetts 02050</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FINANCING STRIP
+     ============================================================ -->
+<section class="py-16 bg-stone-50 border-b border-stone-200">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-5">
+        <div class="w-14 h-14 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e8b84b" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl text-navy-900" style="letter-spacing: -0.02em;">Financing Options Available</h3>
+          <p class="text-navy-700/60 text-sm mt-1">We partner with Enhancify to provide flexible funding options for all project sizes.</p>
+        </div>
+      </div>
+      <a href="finance.html" class="btn-gold text-navy-950 font-bold text-sm px-7 py-3.5 rounded-lg whitespace-nowrap flex-shrink-0">
+        Check Financing Options →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRE-FOOTER CTA BAND
+     ============================================================ -->
+<section class="py-20 lg:py-24 bg-navy-950 relative overflow-hidden grain">
+  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 80% 20%, #e8b84b 0%, transparent 55%);"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-3">Let's Discuss</p>
+    <h2 class="font-display text-4xl lg:text-5xl text-white mb-5" style="letter-spacing:-0.03em">We Are Looking Forward to Work With You</h2>
+    <p class="text-white/60 text-base lg:text-lg mb-10" style="line-height:1.75;">Reach out today for a free, no-pressure consultation. One call. One team. Done right.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:6176786446" class="btn-gold text-navy-950 font-bold text-base px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call 617-678-6446
+      </a>
+      <a href="mailto:mbiviano@hotmail.com" class="btn-outline text-white font-semibold text-base px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2">
+        Email Us
+      </a>
+    </div>
+    <p class="text-white/40 text-sm mt-8">2183 Ocean Street, Marshfield, Massachusetts 02050</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-navy-950 border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand col -->
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3 mb-5" aria-label="Biviano General Contracting Home">
+          <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" />
           <div class="leading-tight">
             <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
             <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
           </div>
+        </a>
+        <p class="text-white/45 text-sm leading-relaxed mb-5" style="line-height: 1.7;">Licensed, insured, and trusted for 40+ years. Serving Marshfield, Duxbury, Scituate, and the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold text-base hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+        <div class="mt-5 flex items-center gap-3">
+          <a href="https://www.facebook.com/Bivianocontracting" target="_blank" rel="noopener" aria-label="Follow Biviano on Facebook" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-[#1877F2] text-white transition-colors duration-150">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Bivianocontracting" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Follow us on Facebook</a>
         </div>
-        <p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p>
-        <a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
       </div>
+
+      <!-- Pages -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4>
         <ul class="space-y-2.5">
@@ -302,42 +497,127 @@
           <li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li>
           <li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li>
           <li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li>
+          <li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li>
+          <li><a href="roadmap.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Our Process</a></li>
+          <li><a href="blog.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Blog</a></li>
           <li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Services -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4>
         <ul class="space-y-2.5">
-          <li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
+          <li><a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
           <li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li>
           <li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li>
           <li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li>
           <li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li>
           <li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li>
+          <li><a href="service-small.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Small Projects</a></li>
         </ul>
       </div>
+
+      <!-- Contact -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
         <ul class="space-y-3">
-          <li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="#e8b84b"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>617-678-6446</a></li>
-          <li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150 flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="#e8b84b"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>mbiviano@hotmail.com</a></li>
-          <li class="text-white/50 text-sm flex items-start gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>2183 Ocean Street, Marshfield, MA 02050</li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-1 flex-shrink-0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span class="text-white/50 text-sm">2183 Ocean Street<br/>Marshfield, MA 02050</span>
+          </li>
         </ul>
+
+        <!-- Review platforms -->
+        <div class="mt-6">
+          <div class="text-white/30 text-xs mb-3 uppercase tracking-wider">Find Us On</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Google</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Yelp</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">HomeAdvisor</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Facebook</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Trex Pro</span>
+          </div>
+        </div>
       </div>
+
     </div>
+
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
       <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
       <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
     </div>
+
   </div>
 </footer>
 
+
+<!-- ============================================================
+     FLOATING MOBILE CTA (appears after scroll)
+     ============================================================ -->
+<div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-stone-200 px-4 py-3" style="box-shadow: 0 -4px 24px rgba(13,21,32,0.12);">
+  <div class="flex gap-3">
+    <a href="tel:6176786446" class="flex-1 bg-navy-900 text-white font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-2">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call Now
+    </a>
+    <a href="#contact-form" class="flex-1 btn-gold text-navy-950 font-bold text-sm py-3 rounded-lg text-center">
+      Get My Free Estimate
+    </a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
+  // Sticky nav scroll class
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-  document.getElementById('menu-btn').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('open');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Floating mobile CTA
+  const floatingCta = document.getElementById('floating-cta');
+  window.addEventListener('scroll', () => {
+    floatingCta.classList.toggle('show', window.scrollY > 300);
+  }, { passive: true });
+
+  // Scroll reveal (IntersectionObserver)
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  }
+
+  // Service card image scale on hover
+  document.querySelectorAll('.service-card').forEach(card => {
+    const img = card.querySelector('img');
+    if (!img) return;
+    card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
+    card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
   });
 </script>
+
 </body>
 </html>

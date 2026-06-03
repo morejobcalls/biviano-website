@@ -3,52 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How It Works | Biviano General Contracting — Our 9-Step Process</title>
-  <meta name="description" content="Our 9-step process takes the stress out of your project. From site evaluation through final walkthrough — here's exactly how Biviano GC works." />
+  <title>Our Process | Biviano General Contracting — South Shore, MA</title>
+  <meta name="description" content="An informational guide to the Biviano modular home construction process — from site evaluation and financing to delivery, finish work, and final walkthrough. 40+ years on the South Shore." />
+  <link rel="icon" type="image/png" href="assets/brand/favicon-dark.png" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-dark.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Biviano General Contracting" />
+  <meta property="og:title" content="Our Process | Biviano General Contracting — South Shore, MA" />
+  <meta property="og:description" content="An informational guide to the Biviano modular home construction process — from site evaluation and financing to delivery, finish work, and final walkthrough. 40+ years on the South Shore." />
+  <meta property="og:url" content="https://www.bivianocontracting.com/roadmap.html" />
+  <meta property="og:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Process | Biviano General Contracting — South Shore, MA" />
+  <meta name="twitter:description" content="An informational guide to the Biviano modular home construction process — from site evaluation and financing to delivery, finish work, and final walkthrough. 40+ years on the South Shore." />
+  <meta name="twitter:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
-            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
-            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+            navy: {
+              950: '#0d1520',
+              900: '#111d2e',
+              800: '#162338',
+              700: '#1e2f47',
+              600: '#243857',
+            },
+            gold: {
+              300: '#f0c96a',
+              400: '#e8b84b',
+              500: '#d4a030',
+              600: '#b8861e',
+            },
+            stone: {
+              50:  '#f9f7f3',
+              100: '#f2ede4',
+              200: '#e5dccf',
+            }
           },
-          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            tightest: '-0.04em',
+            tighter: '-0.03em',
+          }
         }
       }
     }
   </script>
   <style>
     * { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* Grain texture overlay */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Nav transition */
     #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
     #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
-    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
-    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+    /* Button hover states */
+    .btn-gold {
+      background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      box-shadow: 0 4px 20px rgba(212,160,48,0.35);
+    }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 8px 28px rgba(212,160,48,0.45); }
+    .btn-gold:active { transform: translateY(0); }
     .btn-gold:focus-visible { outline: 2px solid #e8b84b; outline-offset: 3px; }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+    .btn-navy {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 16px rgba(13,21,32,0.3);
+    }
+    .btn-navy:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,21,32,0.4); }
+    .btn-navy:active { transform: translateY(0); }
+    .btn-navy:focus-visible { outline: 2px solid #111d2e; outline-offset: 3px; }
+
+    /* Service card hover */
+    .service-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 12px rgba(13,21,32,0.08), 0 1px 4px rgba(13,21,32,0.06);
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,21,32,0.14), 0 4px 12px rgba(13,21,32,0.08); }
+    .service-card:focus-within { outline: 2px solid #d4a030; outline-offset: 2px; }
+
+    /* Testimonial card */
+    .testimonial-card {
+      box-shadow: 0 2px 16px rgba(13,21,32,0.07), 0 1px 4px rgba(13,21,32,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,21,32,0.12), 0 4px 12px rgba(13,21,32,0.08); }
+
+    /* Step number glow */
+    .step-number { text-shadow: 0 0 40px rgba(212,160,48,0.3); }
+
+    /* Scroll reveal — applied by JS after page load */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Phone pulse */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(212,160,48,0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(212,160,48,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,160,48,0); }
+    }
+    .phone-pulse { animation: pulse-ring 2s ease infinite; }
+
+    /* Gold underline accent */
+    .gold-underline { position: relative; display: inline-block; }
+    .gold-underline::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #e8b84b, #d4a030);
+      border-radius: 2px;
+    }
+
+    /* Mobile menu: hidden by default, shown when .open is toggled */
     .mobile-menu { display: none !important; }
     .mobile-menu.open { display: flex !important; }
+    @media (min-width: 1024px) {
+      .mobile-menu { display: none !important; }
+    }
+
+    /* Services dropdown */
     .dropdown { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
     .dropdown-parent:hover .dropdown, .dropdown-parent:focus-within .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+
+    /* Counter animation */
+    .counter { transition: all 0.1s ease; }
+
+    /* Floating CTA bar */
+    #floating-cta {
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    #floating-cta.show { transform: translateY(0); }
   </style>
 </head>
-<body class="bg-stone-50 antialiased">
+<body class="bg-stone-50 text-navy-900 antialiased">
 
+<!-- ============================================================
+     STICKY NAVIGATION
+     ============================================================ -->
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div>
-        <div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div>
+    <div class="flex items-center justify-between h-16 lg:h-18">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Biviano General Contracting Home">
+        <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" style="transition: transform 0.15s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" />
+        <div class="leading-tight">
+          <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+          <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+        </div>
       </a>
+
+      <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-6">
         <div class="dropdown-parent relative">
-          <a href="service.html" class="text-white/75 hover:text-white text-sm font-medium flex items-center gap-1 py-5">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="service.html" class="text-white/75 hover:text-white text-sm font-medium flex items-center gap-1 py-5">
+            Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
           <div class="dropdown absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 w-56">
             <div class="bg-navy-900 rounded-xl border border-white/10 py-2" style="box-shadow:0 20px 48px rgba(0,0,0,0.45);">
-              <a href="service-modular.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
+              <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
               <a href="service-decks.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Decks</span></a>
               <a href="service-adu.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Accessory Dwelling Units</span></a>
               <a href="service-renovations.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Renovations &amp; Additions</span></a>
@@ -63,216 +210,458 @@
         <a href="about.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">About Us</a>
         <a href="community.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Community</a>
       </div>
+
+      <!-- Desktop CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>617-678-6446</a>
-        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          617-678-6446
+        </a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">
+          Get My Free Estimate
+        </a>
       </div>
-      <button id="menu-btn" class="lg:hidden text-white p-2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
     <div class="text-white/50 text-xs uppercase tracking-wider pt-2 pb-1">Services</div>
-    <a href="service-modular.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
+    <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
     <a href="service-decks.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Decks</a>
     <a href="service-adu.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Accessory Dwelling Units</a>
     <a href="service-renovations.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Renovations &amp; Additions</a>
     <a href="service-kitchen.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Kitchen &amp; Baths</a>
     <a href="service-elevation.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">House Elevations</a>
     <a href="service-small.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20 mb-2">Small Projects</a>
-    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-t border-white/10 block">Testimonials</a>
+    <a href="testimonial.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Testimonials</a>
     <a href="finance.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Financing</a>
     <a href="about.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">About Us</a>
     <a href="community.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Community</a>
     <div class="pt-3 flex flex-col gap-2">
-      <a href="tel:6176786446" class="block text-center border-2 border-white/30 text-white font-semibold text-sm px-5 py-3 rounded-md">Call: 617-678-6446</a>
-      <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a>
+      <a href="tel:6176786446" class="btn-outline text-white font-semibold text-sm px-5 py-3 rounded-md text-center">Call: 617-678-6446</a>
+      <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-3 rounded-md text-center">Get My Free Estimate</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="pt-32 pb-20 bg-navy-950 relative overflow-hidden">
-  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 70% 30%, #e8b84b 0%, transparent 55%);"></div>
-  <div class="relative z-10 max-w-4xl mx-auto px-5 lg:px-8 text-center">
-    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">No Guesswork</p>
-    <h1 class="font-display text-5xl lg:text-6xl text-white mb-6" style="letter-spacing:-0.03em; line-height:1.1;">Our 9-Step Process to<br/><span class="text-gold-400">A Perfect Project</span></h1>
-    <p class="text-white/60 text-lg max-w-2xl mx-auto" style="line-height:1.7;">From first call to final walkthrough — here's exactly what happens when you work with Biviano GC. No surprises. Just a clear, proven process built over 40+ years.</p>
+
+<!-- ============================================================
+     INTERIOR HERO — OUR PROCESS
+     ============================================================ -->
+<section class="relative grain overflow-hidden" style="padding-top:64px;">
+  <div class="absolute inset-0">
+    <img src="assets/images/BvbEyJmXstsyyDZs8iBJWlwLus-75279f90.jpg" alt="Biviano General Contracting crew preparing a foundation on a South Shore home site" class="w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(13,21,32,0.94)0%,rgba(13,21,32,0.80)50%,rgba(22,35,56,0.68)100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-3">How We Work</p>
+    <h1 class="font-display text-4xl lg:text-6xl text-white mb-4" style="letter-spacing:-0.03em">Our Process</h1>
+    <p class="text-white/75 text-lg max-w-2xl" style="line-height:1.7">This is an informational guide to provide you with an overview of the modular home construction process.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+      <a href="contact.html" class="btn-gold text-navy-950 font-bold text-base px-7 py-3.5 rounded-lg text-center inline-block">Get My Free Estimate →</a>
+      <a href="tel:6176786446" class="btn-outline text-white font-semibold text-base px-7 py-3.5 rounded-lg text-center inline-flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        617-678-6446
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- STEPS -->
-<section class="py-20 bg-stone-50">
-  <div class="max-w-3xl mx-auto px-5 lg:px-8">
 
-    <div class="space-y-8">
-
-      <!-- Step 1 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-gold-500 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(212,160,48,0.35);">
-            <span class="text-navy-950 font-bold text-lg font-display">1</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Site Evaluation &amp; Initial Consultation</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">We come to you — no charge, no obligation. We walk the property, discuss your goals, and assess feasibility. You leave with a clear picture of what's possible before spending a dollar.</p>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">2</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Design Consultation</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">We work with you on the design — layouts, materials, finishes, and scope. For larger projects, we coordinate with engineers and architects so the design is buildable, permitted, and within budget from the start.</p>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">3</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Engineering &amp; Permitting</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">We handle all engineering plans, structural calculations, and permit applications. We manage the town's building department process so you don't have to navigate the bureaucracy yourself. Projects don't start until all permits are in hand.</p>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">4</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Project Proposal &amp; Pricing</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">You receive a detailed, itemized proposal with clear scope, materials, and pricing. No vague estimates. No surprise line items later. What we quote is what you pay — unless you request changes to the scope.</p>
-        </div>
-      </div>
-
-      <!-- Step 5 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">5</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Contract &amp; Deposit</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">Once you're ready, we sign a clear contract outlining all work, timeline, payment schedule, and warranty terms. A deposit secures your spot on our schedule. Financing options are available if needed.</p>
-        </div>
-      </div>
-
-      <!-- Step 6 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">6</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Material Selection &amp; Ordering</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">We guide you through material selections — decking, roofing, cabinetry, flooring, fixtures, and more. Materials are ordered and staged before your start date so there are no delays once work begins.</p>
-        </div>
-      </div>
-
-      <!-- Step 7 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">7</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Demolition &amp; Site Prep</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">Our crew handles all demolition, debris removal, and site preparation — clean, safe, and respecting your property. We protect surrounding areas, minimize mess, and keep your neighbors at ease throughout.</p>
-        </div>
-      </div>
-
-      <!-- Step 8 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-navy-900 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(13,21,32,0.25);">
-            <span class="text-gold-400 font-bold text-lg font-display">8</span>
-          </div>
-          <div class="w-0.5 h-full bg-stone-200 mt-3"></div>
-        </div>
-        <div class="pb-8">
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Construction</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">Our experienced crew executes the build with precision. You receive regular progress updates, and we're always reachable if you have questions. We maintain a clean, organized job site from first day to last.</p>
-        </div>
-      </div>
-
-      <!-- Step 9 -->
-      <div class="flex gap-6">
-        <div class="flex flex-col items-center">
-          <div class="w-12 h-12 rounded-2xl bg-gold-500 flex items-center justify-center flex-shrink-0" style="box-shadow: 0 4px 16px rgba(212,160,48,0.35);">
-            <span class="text-navy-950 font-bold text-lg font-display">9</span>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-display text-xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Final Walkthrough &amp; Warranty</h3>
-          <p class="text-navy-700/60 text-sm leading-relaxed" style="line-height:1.75;">We do a thorough final walkthrough together. Every detail is reviewed, every concern is addressed before we consider the job complete. You receive your 20-year craftsmanship warranty documentation, and we stay in touch. Our relationship doesn't end when the project does.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Mid-page CTA -->
-    <div class="mt-16 bg-navy-900 rounded-3xl p-10 text-center relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10" style="background: radial-gradient(ellipse at 50% 0%, #e8b84b 0%, transparent 60%);"></div>
-      <div class="relative z-10">
-        <h2 class="font-display text-3xl text-white mb-4" style="letter-spacing:-0.03em;">Ready to Start Step 1?</h2>
-        <p class="text-white/60 text-sm mb-8 max-w-md mx-auto" style="line-height:1.7;">The free site evaluation costs you nothing and tells you everything. Call us or request an estimate online.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="contact.html" class="btn-gold text-navy-950 font-bold text-base px-8 py-4 rounded-lg">Request Free Estimate →</a>
-          <a href="tel:6176786446" class="border-2 border-white/30 hover:border-white/60 text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-150">617-678-6446</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-navy-950/98 border-t border-white/10 px-4 py-3 flex gap-3">
-  <a href="tel:6176786446" class="flex-1 text-center border border-white/30 text-white font-semibold text-sm py-3 rounded-lg">Call Now</a>
-  <a href="contact.html" class="flex-1 btn-gold text-center text-navy-950 font-bold text-sm py-3 rounded-lg">Free Estimate</a>
-</div>
-
-<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-24 lg:pb-8">
+<!-- ============================================================
+     INTRO BAND
+     ============================================================ -->
+<section class="py-16 lg:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-      <div><div class="flex items-center gap-3 mb-4"><div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div><div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div></div><p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p><a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a></div>
-      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">About Us</a></li><li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li><li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li><li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li><li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li><li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li></ul></div>
-      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4><ul class="space-y-2.5"><li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li><li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li><li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li><li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li><li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li><li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li><li><a href="service-small.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Small Projects</a></li></ul></div>
-      <div><h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4><ul class="space-y-3"><li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a></li><li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a></li><li class="text-white/50 text-sm">2183 Ocean Street, Marshfield, MA 02050</li></ul></div>
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 24px 60px rgba(13,21,32,0.18);">
+          <img src="assets/images/CpeD5huL9dRJRQBRQpYEFdkqIk-8e307f5f.png" alt="The Biviano team reviewing project plans and finishes with a homeowner" class="w-full h-auto object-cover" />
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay: 0.12s;">
+        <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">9 Steps, Start to Finish</p>
+        <h2 class="font-display text-3xl lg:text-4xl text-navy-900 mb-5" style="letter-spacing:-0.03em; line-height:1.1;">A Clear Path from <span class="gold-underline">First Visit to Final Walkthrough</span></h2>
+        <p class="text-navy-700/65 text-base leading-relaxed" style="line-height:1.75;">
+          With over 40 years building on the South Shore, we've refined every stage of construction into a process you can actually follow. Below is an overview of how a modular home — and most large projects — comes together with Biviano, from confirming your site is buildable to handing you the keys.
+        </p>
+      </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     9-STEP PROCESS
+     ============================================================ -->
+<section class="py-16 lg:py-24 bg-stone-50">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+
+    <div class="relative">
+      <!-- Vertical connector line (desktop) -->
+      <div class="hidden md:block absolute top-4 bottom-4 left-7 w-px" style="background: linear-gradient(180deg, transparent, #d4a030 6%, #d4a030 94%, transparent); opacity:0.35;"></div>
+
+      <div class="space-y-6 lg:space-y-8">
+
+        <!-- Step 1 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">1</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/kCP1CSc180Pa2iKcOdZmRsKXY-6a9a8d4c.png" alt="Site evaluation and project planning icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#1</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Site Evaluation &amp; Project Planning</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">The first step is confirming that your property is suitable for building or renovation. We review zoning, elevation, setbacks, and any coastal or FEMA-related requirements. If you're still searching for land, we can help assess options before you buy to avoid costly surprises.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">2</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/H1dqW2v30Lbq6YQU7a9JkCfzLwQ-801d63be.png" alt="Choosing Biviano as your builder icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#2</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Choose Biviano as Your Builder</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">Once you're ready to move forward, you'll meet with our team to discuss your goals, budget, and timeline. With over 40 years of experience on the South Shore, we explain the full scope of your project and outline what's needed to bring your design to life. This step ensures clarity before any commitments are made.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">3</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/5sDdI75IMBWdb773xrQ0pLsT9NY-3a162303.png" alt="Secure financing icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#3</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Secure Financing</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">If financing is needed, we connect you with lenders who understand construction, modular homes, renovations, and elevation projects. You can also use your preferred bank—our team provides all required documents and assists throughout the approval process. This ensures your project can move forward without delays.</p>
+                <a href="finance.html" class="inline-flex items-center gap-1.5 text-gold-600 hover:text-gold-500 text-sm font-semibold mt-3 transition-colors duration-150">See financing options <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">4</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/NwpUNC3vYuFkUFuRj7dWLJ69P6c-febff680.png" alt="Design your home or project icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#4</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Design Your Home or Project</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">We work closely with you to design a space that fits your needs, vision, and budget. Whether it's a modular home, addition, renovation, or custom deck, you'll choose layouts, finishes, materials, and structural options with our guidance. This step defines exactly what will be built before production begins.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">5</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/xpe1HAbs95Xu5VGno9mL7hzS8-b8f05798.png" alt="Finalize your order icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#5</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Finalize Your Order</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">Once plans are approved, we finalize all details and prepare your project for production. Permits, engineering, surveys, and material selections are completed during this phase. For modular homes, factory orders are placed; for renovations and additions, materials and timelines are locked in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">6</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/e4gj3UKqhlZAIQjC5DmG4XP4rQI-95cef3c1.png" alt="Construction begins icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#6</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Construction Begins</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">After permits are cleared, construction officially starts. Our team handles foundations, elevations, framing, structural work, and all preparation needed depending on your project type. For modular homes, your home is built simultaneously at the factory, reducing on-site wait times.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">7</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/AGrVCy9afnceQ687zee9nZo-90b08869.png" alt="Delivery and setting icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#7</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Delivery &amp; Setting</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">Factory-built modules are transported to your property and professionally set onto the prepared foundation. Our crew ensures the structure is aligned, secured, and weather-tight the same day. This step dramatically accelerates the build timeline compared to traditional construction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">8</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/6y5MP0rGNhQeVnZqsAIO6k8VVo-eca229a9.png" alt="On-site finish work icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#8</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">On-Site Finish Work</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">After the structure is in place, our builders complete all interior and exterior finishes—flooring, trim, cabinetry, siding, decks, railings, plumbing, and electrical. For renovations and additions, this includes blending new work seamlessly with the existing home. Attention to detail is key in this phase.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 9 -->
+        <div class="reveal relative md:pl-24">
+          <div class="hidden md:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-gold-500 items-center justify-center step-number font-display text-navy-950 text-xl font-bold z-10" style="box-shadow: 0 4px 20px rgba(212,160,48,0.4);">9</div>
+          <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 2px 16px rgba(13,21,32,0.07);">
+            <div class="flex items-start gap-5">
+              <img src="assets/images/9uSMHcGkfzziIVA8gmVJrod5SI-71cc997a.png" alt="Final walkthrough and enjoy icon" class="hidden sm:block w-16 h-16 flex-shrink-0 object-contain" />
+              <div>
+                <div class="text-gold-600 text-sm font-bold mb-1 md:hidden">#9</div>
+                <h3 class="font-display text-xl lg:text-2xl text-navy-900 mb-2" style="letter-spacing:-0.02em;">Final Walkthrough &amp; Enjoy</h3>
+                <p class="text-navy-700/65 text-sm lg:text-base leading-relaxed" style="line-height:1.75;">When your project is complete, we walk through everything together to confirm your satisfaction. Any adjustments are handled immediately, and we provide warranty information along with required certificates. You can now enjoy a durable, beautifully crafted home built by a trusted local team.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
+<section class="bg-navy-900 py-12 lg:py-14">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-0 lg:divide-x lg:divide-white/15">
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl lg:text-5xl text-gold-400 font-bold" style="letter-spacing:-0.03em;">2K+</div>
+        <div class="text-white/60 text-sm mt-1 font-medium">Happy Homeowners</div>
+      </div>
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl lg:text-5xl text-gold-400 font-bold" style="letter-spacing:-0.03em;">500+</div>
+        <div class="text-white/60 text-sm mt-1 font-medium">Successful project</div>
+      </div>
+      <div class="text-center lg:px-8">
+        <div class="font-display text-4xl lg:text-5xl text-gold-400 font-bold" style="letter-spacing:-0.03em;">99%</div>
+        <div class="text-white/60 text-sm mt-1 font-medium">Satisfaction rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CTA BAND
+     ============================================================ -->
+<section id="contact" class="py-20 lg:py-28 bg-navy-950 relative overflow-hidden grain">
+  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 80% 20%, #e8b84b 0%, transparent 55%);"></div>
+  <div class="absolute inset-0 opacity-8" style="background: radial-gradient(ellipse at 20% 80%, #e8b84b 0%, transparent 50%);"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-5 lg:px-8 text-center">
+    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">We are looking forward to work with you</p>
+    <h2 class="font-display text-4xl lg:text-5xl text-white mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Let's Discuss Your Project</h2>
+    <p class="text-white/60 text-base leading-relaxed mb-9 max-w-xl mx-auto" style="line-height:1.75;">
+      Ready to start the process? Reach out for a free, no-pressure consultation and we'll walk you through every step — from your site evaluation to your final walkthrough.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+      <a href="contact.html" class="btn-gold text-navy-950 font-bold text-base px-8 py-4 rounded-lg text-center inline-block">Get My Free Estimate →</a>
+      <a href="tel:6176786446" class="btn-outline text-white font-semibold text-base px-8 py-4 rounded-lg text-center inline-flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        617-678-6446
+      </a>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-white/50 text-sm">
+      <a href="tel:6176786446" class="hover:text-gold-400 transition-colors duration-150">Phone: 617-678-6446</a>
+      <span class="hidden sm:inline text-white/20">·</span>
+      <span>2183 Ocean Street Marshfield, Massachusetts 02050</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-navy-950 border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand col -->
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3 mb-5" aria-label="Biviano General Contracting Home">
+          <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" />
+          <div class="leading-tight">
+            <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+            <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+          </div>
+        </a>
+        <p class="text-white/45 text-sm leading-relaxed mb-5" style="line-height: 1.7;">Licensed, insured, and trusted for 40+ years. Serving Marshfield, Duxbury, Scituate, and the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold text-base hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+        <div class="mt-5 flex items-center gap-3">
+          <a href="https://www.facebook.com/Bivianocontracting" target="_blank" rel="noopener" aria-label="Follow Biviano on Facebook" class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-[#1877F2] text-white transition-colors duration-150">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Bivianocontracting" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Follow us on Facebook</a>
+        </div>
+      </div>
+
+      <!-- Pages -->
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">About Us</a></li>
+          <li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li>
+          <li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li>
+          <li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li>
+          <li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li>
+          <li><a href="roadmap.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Our Process</a></li>
+          <li><a href="blog.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Blog</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
+          <li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li>
+          <li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li>
+          <li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li>
+          <li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li>
+          <li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li>
+          <li><a href="service-small.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Small Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-1 flex-shrink-0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span class="text-white/50 text-sm">2183 Ocean Street<br/>Marshfield, MA 02050</span>
+          </li>
+        </ul>
+
+        <!-- Review platforms -->
+        <div class="mt-6">
+          <div class="text-white/30 text-xs mb-3 uppercase tracking-wider">Find Us On</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Google</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Yelp</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">HomeAdvisor</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Facebook</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Trex Pro</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
       <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
       <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
     </div>
+
   </div>
 </footer>
 
+
+<!-- ============================================================
+     FLOATING MOBILE CTA (appears after scroll)
+     ============================================================ -->
+<div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-stone-200 px-4 py-3" style="box-shadow: 0 -4px 24px rgba(13,21,32,0.12);">
+  <div class="flex gap-3">
+    <a href="tel:6176786446" class="flex-1 bg-navy-900 text-white font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-2">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call Now
+    </a>
+    <a href="contact.html" class="flex-1 btn-gold text-navy-950 font-bold text-sm py-3 rounded-lg text-center">
+      Get My Free Estimate
+    </a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
+  // Sticky nav scroll class
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-  document.getElementById('menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Floating mobile CTA
+  const floatingCta = document.getElementById('floating-cta');
+  window.addEventListener('scroll', () => {
+    floatingCta.classList.toggle('show', window.scrollY > 300);
+  }, { passive: true });
+
+  // Scroll reveal (IntersectionObserver)
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  }
+
+  // Service card image scale on hover
+  document.querySelectorAll('.service-card').forEach(card => {
+    const img = card.querySelector('img');
+    if (!img) return;
+    card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
+    card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
+  });
 </script>
+
 </body>
 </html>

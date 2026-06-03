@@ -2,3 +2,5 @@ node_modules/
 temporary screenshots/
 package-lock.json
 .DS_Store
+._*
+_scrape/

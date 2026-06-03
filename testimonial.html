@@ -4,47 +4,190 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reviews | Biviano General Contracting — 5-Star South Shore Contractor</title>
-  <meta name="description" content="See why 2,000+ South Shore homeowners trust Biviano General Contracting. 5-star rated on Google, Yelp, and HomeAdvisor." />
+  <meta name="description" content="See why South Shore homeowners trust Biviano General Contracting. Read 5-star reviews from real customers and find us on Google, Yelp, HomeAdvisor, Facebook, and Trex." />
+  <link rel="icon" type="image/png" href="assets/brand/favicon-dark.png" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-dark.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Biviano General Contracting" />
+  <meta property="og:title" content="Reviews | Biviano General Contracting — 5-Star South Shore Contractor" />
+  <meta property="og:description" content="See why South Shore homeowners trust Biviano General Contracting. Read 5-star reviews from real customers and find us on Google, Yelp, HomeAdvisor, Facebook, and Trex." />
+  <meta property="og:url" content="https://www.bivianocontracting.com/testimonial.html" />
+  <meta property="og:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reviews | Biviano General Contracting — 5-Star South Shore Contractor" />
+  <meta name="twitter:description" content="See why South Shore homeowners trust Biviano General Contracting. Read 5-star reviews from real customers and find us on Google, Yelp, HomeAdvisor, Facebook, and Trex." />
+  <meta name="twitter:image" content="https://www.bivianocontracting.com/assets/brand/og-image.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy: { 950: '#0d1520', 900: '#111d2e', 800: '#162338', 700: '#1e2f47', 600: '#243857' },
-            gold: { 300: '#f0c96a', 400: '#e8b84b', 500: '#d4a030', 600: '#b8861e' },
-            stone: { 50: '#f9f7f3', 100: '#f2ede4', 200: '#e5dccf' }
+            navy: {
+              950: '#0d1520',
+              900: '#111d2e',
+              800: '#162338',
+              700: '#1e2f47',
+              600: '#243857',
+            },
+            gold: {
+              300: '#f0c96a',
+              400: '#e8b84b',
+              500: '#d4a030',
+              600: '#b8861e',
+            },
+            stone: {
+              50:  '#f9f7f3',
+              100: '#f2ede4',
+              200: '#e5dccf',
+            }
           },
-          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'] }
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            tightest: '-0.04em',
+            tighter: '-0.03em',
+          }
         }
       }
     }
   </script>
   <style>
     * { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* Grain texture overlay */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Nav transition */
     #nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
     #nav.scrolled { background: rgba(13,21,32,0.97); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
-    .btn-gold { background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%); transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease; box-shadow: 0 4px 20px rgba(212,160,48,0.35); }
-    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); }
-    .review-card { box-shadow: 0 2px 16px rgba(13,21,32,0.07); transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .review-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,21,32,0.12); }
+
+    /* Button hover states */
+    .btn-gold {
+      background: linear-gradient(135deg, #e8b84b 0%, #d4a030 100%);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      box-shadow: 0 4px 20px rgba(212,160,48,0.35);
+    }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 8px 28px rgba(212,160,48,0.45); }
+    .btn-gold:active { transform: translateY(0); }
+    .btn-gold:focus-visible { outline: 2px solid #e8b84b; outline-offset: 3px; }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+    .btn-navy {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 16px rgba(13,21,32,0.3);
+    }
+    .btn-navy:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,21,32,0.4); }
+    .btn-navy:active { transform: translateY(0); }
+    .btn-navy:focus-visible { outline: 2px solid #111d2e; outline-offset: 3px; }
+
+    /* Service card hover */
+    .service-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 12px rgba(13,21,32,0.08), 0 1px 4px rgba(13,21,32,0.06);
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,21,32,0.14), 0 4px 12px rgba(13,21,32,0.08); }
+    .service-card:focus-within { outline: 2px solid #d4a030; outline-offset: 2px; }
+
+    /* Testimonial card */
+    .testimonial-card {
+      box-shadow: 0 2px 16px rgba(13,21,32,0.07), 0 1px 4px rgba(13,21,32,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,21,32,0.12), 0 4px 12px rgba(13,21,32,0.08); }
+
+    /* Step number glow */
+    .step-number { text-shadow: 0 0 40px rgba(212,160,48,0.3); }
+
+    /* Scroll reveal — applied by JS after page load */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Phone pulse */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(212,160,48,0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(212,160,48,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,160,48,0); }
+    }
+    .phone-pulse { animation: pulse-ring 2s ease infinite; }
+
+    /* Gold underline accent */
+    .gold-underline { position: relative; display: inline-block; }
+    .gold-underline::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #e8b84b, #d4a030);
+      border-radius: 2px;
+    }
+
+    /* Mobile menu: hidden by default, shown when .open is toggled */
     .mobile-menu { display: none !important; }
     .mobile-menu.open { display: flex !important; }
+    @media (min-width: 1024px) {
+      .mobile-menu { display: none !important; }
+    }
+
+    /* Services dropdown */
     .dropdown { visibility: hidden; opacity: 0; transform: translateY(8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
     .dropdown-parent:hover .dropdown, .dropdown-parent:focus-within .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+
+    /* Counter animation */
+    .counter { transition: all 0.1s ease; }
+
+    /* Floating CTA bar */
+    #floating-cta {
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    #floating-cta.show { transform: translateY(0); }
   </style>
 </head>
-<body class="bg-stone-50 antialiased">
+<body class="bg-stone-50 text-navy-900 antialiased">
 
-<!-- NAV -->
+<!-- ============================================================
+     STICKY NAVIGATION
+     ============================================================ -->
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div>
-        <div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div>
+    <div class="flex items-center justify-between h-16 lg:h-18">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Biviano General Contracting Home">
+        <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" style="transition: transform 0.15s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" />
+        <div class="leading-tight">
+          <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+          <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+        </div>
       </a>
+
+      <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-6">
         <div class="dropdown-parent relative">
           <a href="service.html" class="text-white/75 hover:text-white text-sm font-medium flex items-center gap-1 py-5">
@@ -52,7 +195,7 @@
           </a>
           <div class="dropdown absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 w-56">
             <div class="bg-navy-900 rounded-xl border border-white/10 py-2" style="box-shadow:0 20px 48px rgba(0,0,0,0.45);">
-              <a href="service-modular.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
+              <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Custom Modular Homes</span></a>
               <a href="service-decks.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Decks</span></a>
               <a href="service-adu.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Accessory Dwelling Units</span></a>
               <a href="service-renovations.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-white/8 transition-colors duration-150"><span class="text-white/85 hover:text-white text-sm">Renovations &amp; Additions</span></a>
@@ -62,192 +205,340 @@
             </div>
           </div>
         </div>
-        <a href="testimonial.html" class="text-gold-400 text-sm font-medium">Testimonials</a>
+        <a href="testimonial.html" class="text-white text-sm font-medium transition-colors duration-150">Testimonials</a>
         <a href="finance.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Financing</a>
         <a href="about.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">About Us</a>
         <a href="community.html" class="text-white/75 hover:text-white text-sm font-medium transition-colors duration-150">Community</a>
       </div>
+
+      <!-- Desktop CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150">617-678-6446</a>
-        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">Free Estimate</a>
+        <a href="tel:6176786446" class="text-white/80 hover:text-gold-400 text-sm font-medium transition-colors duration-150 flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          617-678-6446
+        </a>
+        <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-2.5 rounded-md">
+          Get My Free Estimate
+        </a>
       </div>
-      <button id="menu-btn" class="lg:hidden text-white p-2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu flex-col bg-navy-900 border-t border-white/10 px-5 py-4 gap-1">
     <div class="text-white/50 text-xs uppercase tracking-wider pt-2 pb-1">Services</div>
-    <a href="service-modular.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
+    <a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Custom Modular Homes</a>
     <a href="service-decks.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Decks</a>
     <a href="service-adu.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Accessory Dwelling Units</a>
     <a href="service-renovations.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Renovations &amp; Additions</a>
     <a href="service-kitchen.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">Kitchen &amp; Baths</a>
     <a href="service-elevation.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20">House Elevations</a>
     <a href="service-small.html" class="text-white/80 hover:text-white py-2 pl-3 text-sm block border-l border-white/20 mb-2">Small Projects</a>
-    <a href="testimonial.html" class="text-gold-400 py-2.5 text-sm font-medium border-t border-white/10 block">Testimonials</a>
+    <a href="testimonial.html" class="text-gold-400 py-2.5 text-sm font-medium border-b border-white/10 block">Testimonials</a>
     <a href="finance.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Financing</a>
     <a href="about.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">About Us</a>
     <a href="community.html" class="text-white/80 hover:text-white py-2.5 text-sm font-medium border-b border-white/10 block">Community</a>
     <div class="pt-3 flex flex-col gap-2">
-      <a href="tel:6176786446" class="block text-center border-2 border-white/30 text-white font-semibold text-sm px-5 py-3 rounded-md">Call: 617-678-6446</a>
-      <a href="contact.html" class="btn-gold block text-center text-navy-950 font-bold text-sm px-5 py-3 rounded-md">Get a Free Estimate</a>
+      <a href="tel:6176786446" class="btn-outline text-white font-semibold text-sm px-5 py-3 rounded-md text-center">Call: 617-678-6446</a>
+      <a href="contact.html" class="btn-gold text-navy-950 font-semibold text-sm px-5 py-3 rounded-md text-center">Get My Free Estimate</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="pt-32 pb-16 bg-navy-950 relative overflow-hidden">
-  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 60% 40%, #e8b84b 0%, transparent 55%);"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 text-center">
-    <div class="flex justify-center mb-4">
+
+<!-- ============================================================
+     INTERIOR HERO
+     ============================================================ -->
+<section class="relative grain overflow-hidden" style="padding-top:64px;">
+  <div class="absolute inset-0">
+    <img src="assets/images/X0KO5PARd8czL7cpTeZNrCVwj0-a781ed25.png" alt="A finished Biviano-built home on the South Shore of Massachusetts" class="w-full h-full object-cover" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(13,21,32,0.94) 0%,rgba(13,21,32,0.80) 50%,rgba(22,35,56,0.68) 100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 text-center">
+    <div class="flex justify-center mb-5">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
     </div>
-    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">Trusted by South Shore Homeowners for 40+ Years</p>
-    <h1 class="font-display text-5xl lg:text-6xl text-white mb-4" style="letter-spacing: -0.03em;">People Love<br/>Mike Biviano</h1>
-    <p class="text-white/55 text-lg">5-Star Rated on Google · Yelp · HomeAdvisor · Facebook</p>
+    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-3">Customer Reviews</p>
+    <h1 class="font-display text-4xl lg:text-6xl text-white mb-4" style="letter-spacing:-0.03em">Trusted by South Shore Homeowners for 40+ Years</h1>
+    <p class="text-white/75 text-lg max-w-2xl mx-auto mb-2" style="line-height:1.7">People love Mike Biviano.</p>
+    <p class="text-gold-400/90 text-sm font-medium">We are a top rated 5 star contractor</p>
   </div>
 </section>
 
-<!-- REVIEWS GRID -->
-<section class="py-16 lg:py-24 bg-stone-50">
+
+<!-- ============================================================
+     REVIEWS GRID (9 verbatim reviews)
+     ============================================================ -->
+<section class="py-20 lg:py-28 bg-stone-50">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div class="text-center mb-14 reveal">
+      <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">What Homeowners Say</p>
+      <h2 class="font-display text-4xl lg:text-5xl text-navy-900 mb-4" style="letter-spacing:-0.03em">People Love Mike Biviano</h2>
+      <p class="text-navy-700/60 text-lg max-w-xl mx-auto" style="line-height:1.7">Real reviews from real South Shore families — verbatim, never edited.</p>
+    </div>
 
-      <!-- Review 1 -->
-      <div class="review-card bg-white rounded-2xl p-7">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+
+      <!-- Review 1 — Gianna Cacciatore -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
         <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike came by on short notice to check out a concerning crack in my ceiling. He was incredibly helpful, professional, and put my mind at ease right away. Highly recommend for any home concerns."</p>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike came by on short notice to check out a concerning crack in my ceiling. He was responsive, knowledgeable, and kind — exactly what you want in a contractor. Whole heartedly recommend!"</p>
         <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
           <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">GC</div>
           <div><div class="text-navy-900 font-semibold text-sm">Gianna Cacciatore</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
         </div>
       </div>
 
-      <!-- Review 2 -->
-      <div class="review-card bg-white rounded-2xl p-7">
+      <!-- Review 2 — Robert Barrett -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
         <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"We tried to get our deck replaced but no company would call us back. Then we went to Biviano. They were responsive, professional, and the deck came out beautifully. We'll use them again."</p>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"We tried to get our deck replaced but no company would call us back. Then we went to Biviano General Contracting and they immediately responded and gave us a low-stress, no-hassle estimate to replace our 520 sq ft deck. Michael Biviano was extremely professional and a pleasure to work with. We asked if they could have it installed by Thanksgiving and they did. The crew was awesome. They started 10/31, demolished the deck in a few hours, framed it out, and finished on 11/6. Never seen a crew work so hard. We were so pleased that we're already planning our next project; residing our house. I would proudly recommend them."</p>
         <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
           <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">RB</div>
           <div><div class="text-navy-900 font-semibold text-sm">Robert Barrett</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
         </div>
       </div>
 
-      <!-- Review 3 -->
-      <div class="review-card bg-white rounded-2xl p-7">
+      <!-- Review 3 — Joanne Keogh -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
         <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Building our new house in Humarock with Mike Biviano was a happily ever after journey. Every step was handled professionally and the result is beyond what we hoped for."</p>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Building our new house in Humarock with Mike Biviano was a happily ever after journey. From start to finish Mike was very professional. Always available to answer questions, go over thoughts and ideas. Mike builds a high quality home with attention to detail. Once the house was placed on piling it was completed 10 and a half weeks later and we moved into our new dream home."</p>
         <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
           <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">JK</div>
           <div><div class="text-navy-900 font-semibold text-sm">Joanne Keogh</div><div class="text-navy-700/40 text-xs mt-0.5">Humarock, MA</div></div>
         </div>
       </div>
 
-      <!-- Review 4 -->
-      <div class="review-card bg-white rounded-2xl p-7">
+      <!-- Review 4 — Jenny Hol -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
         <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike and his crew did a great job expanding and remodeling our kitchen. We love it! Very professional, clean work, and done on schedule. Highly recommend."</p>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike and his crew did a great job expanding and remodeling our kitchen. We love our new space! Easy to communicate with and very responsive to all our questions. We highly recommend and will definitely use them for future projects!"</p>
         <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
           <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">JH</div>
           <div><div class="text-navy-900 font-semibold text-sm">Jenny Hol</div><div class="text-navy-700/40 text-xs mt-0.5">Marshfield, MA</div></div>
         </div>
       </div>
 
-      <!-- Review 5 -->
-      <div class="review-card bg-white rounded-2xl p-7">
+      <!-- Review 5 — Jocelyn Mae -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
         <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"For the past 2 years we have enjoyed our new kitchen and dining area that Biviano made real. From the suggestions Mike comes up with to the handholding throughout the process — thank you."</p>
-        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
-          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">DK</div>
-          <div><div class="text-navy-900 font-semibold text-sm">Denis Kelleher</div><div class="text-navy-700/40 text-xs mt-0.5">Marshfield, MA</div></div>
-        </div>
-      </div>
-
-      <!-- Review 6 -->
-      <div class="review-card bg-white rounded-2xl p-7">
-        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike is great to work with. He and his dad bring great depth of knowledge to jobs. Very fair pricing and excellent craftsmanship. Our deck has been beautiful for years."</p>
-        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
-          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">BW</div>
-          <div><div class="text-navy-900 font-semibold text-sm">Bob W.</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
-        </div>
-      </div>
-
-      <!-- Review 7 -->
-      <div class="review-card bg-white rounded-2xl p-7">
-        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"From the suggestions Mike comes up with to the handholding throughout the process — thank you. He made a stressful renovation feel manageable and even enjoyable."</p>
-        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
-          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">SR</div>
-          <div><div class="text-navy-900 font-semibold text-sm">Susan R.</div><div class="text-navy-700/40 text-xs mt-0.5">Marshfield, MA</div></div>
-        </div>
-      </div>
-
-      <!-- Review 8 -->
-      <div class="review-card bg-white rounded-2xl p-7">
-        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike and his crew were great to work with. We had our entire back deck redone. They were on time, communicated well throughout the project, and the finished product is fantastic."</p>
-        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
-          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">DC</div>
-          <div><div class="text-navy-900 font-semibold text-sm">Devin Cassinelli</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
-        </div>
-      </div>
-
-      <!-- Review 9 -->
-      <div class="review-card bg-white rounded-2xl p-7">
-        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"5 stars for Biviano General Contracting. I have an old cape with original wooden arched doors and unique details — Mike understood the character of the home and worked with it beautifully."</p>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"5 stars for Biviano General Contracting. I have an old cape with original wooden arched garage doors falling apart that desperately needed fixing, as well as a few other random repairs. The owner Mike Biviano Jr came out with his crew and not only rebuilt those doors and painted them in a day, but I also have to comment on how cheerful everyone was! I could hear them singing, whistling and laughing while they worked, which made my day. Thank you BGC! Highly recommend!"</p>
         <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
           <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">JM</div>
           <div><div class="text-navy-900 font-semibold text-sm">Jocelyn Mae</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
         </div>
       </div>
 
-    </div>
-
-    <!-- Leave a review CTA -->
-    <div class="bg-navy-900 rounded-3xl p-10 text-center relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10" style="background: radial-gradient(ellipse at 50% 50%, #e8b84b 0%, transparent 60%);"></div>
-      <div class="relative z-10">
-        <h2 class="font-display text-3xl text-white mb-3" style="letter-spacing:-0.02em;">Share Your Experience</h2>
-        <p class="text-white/55 text-base mb-8">Your review helps other South Shore homeowners find a contractor they can trust.</p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <a href="#" class="bg-white/10 border border-white/20 hover:bg-white/15 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Review on Google</a>
-          <a href="#" class="bg-white/10 border border-white/20 hover:bg-white/15 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Review on Yelp</a>
-          <a href="#" class="bg-white/10 border border-white/20 hover:bg-white/15 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Review on HomeAdvisor</a>
-          <a href="#" class="bg-white/10 border border-white/20 hover:bg-white/15 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Review on Facebook</a>
+      <!-- Review 6 — Denis Kelleher -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
+        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"For the past 2 years we have enjoyed our new kitchen and dining area that Biviano General Contracting LLC made a reality. Through design and build Mike and team were great partners. Highly recommend."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">DK</div>
+          <div><div class="text-navy-900 font-semibold text-sm">Denis Kelleher</div><div class="text-navy-700/40 text-xs mt-0.5">Marshfield, MA</div></div>
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-16 bg-stone-100 border-t border-stone-200">
-  <div class="max-w-3xl mx-auto px-5 text-center">
-    <h2 class="font-display text-3xl text-navy-900 mb-4" style="letter-spacing:-0.02em;">Ready to Join Our Happy Homeowners?</h2>
-    <p class="text-navy-700/60 text-base mb-8">Call us or request a free estimate — we'll get back to you within 24 hours.</p>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="contact.html" class="btn-gold text-navy-950 font-bold text-base px-8 py-4 rounded-lg">Get Your Free Estimate →</a>
-      <a href="tel:6176786446" class="bg-navy-900 text-white font-semibold text-base px-8 py-4 rounded-lg hover:bg-navy-800 transition-colors duration-150">617-678-6446</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-navy-950 border-t border-white/10 pt-14 pb-8">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-      <div>
-        <div class="flex items-center gap-3 mb-4"><div class="w-9 h-9 rounded bg-gold-500 flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 18V8L10 2L18 8V18H13V13H7V18H2Z" fill="#0d1520"/></svg></div><div class="leading-tight"><div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div><div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div></div></div>
-        <p class="text-white/40 text-sm leading-relaxed mb-4" style="line-height:1.7;">Licensed, insured, and trusted for 40+ years. Serving the South Shore.</p>
-        <a href="tel:6176786446" class="text-gold-400 font-semibold hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+      <!-- Review 7 — Bob W. -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
+        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike is great to work with .He and his dad are both general contractor and bring a great depth of knowledge to the job. Their crews are very hard working,clean,polite and meticulous."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">BW</div>
+          <div><div class="text-navy-900 font-semibold text-sm">Bob W.</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
+        </div>
       </div>
+
+      <!-- Review 8 — Susan R -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
+        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"From the suggestions Mike comes up with that I never would have thought of, to the handholding throughout the process I can't thank you enough. My dream kitchen and baths are complete and I could not be happier. Honest, knowledgeable and prompt are the words I use to describe Mike Biviano and his crew."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">SR</div>
+          <div><div class="text-navy-900 font-semibold text-sm">Susan R</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
+        </div>
+      </div>
+
+      <!-- Review 9 — Devin Cassinelli -->
+      <div class="testimonial-card bg-white rounded-2xl p-7 reveal">
+        <div class="flex mb-4"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="text-navy-800 text-sm leading-relaxed mb-6" style="line-height:1.8;">"Mike and his crew were great to work. We had our entire back deck redone, added a roof, heaters, and motorized screens. It looks amazing. Mike was responsive, honest, and it felt like he always had our best interest in mind when sharing ideas and weighing the pros and cons. We'd highly recommend this group."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+          <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xs">DC</div>
+          <div><div class="text-navy-900 font-semibold text-sm">Devin Cassinelli</div><div class="text-navy-700/40 text-xs mt-0.5">South Shore, MA</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SHARE YOUR EXPERIENCE (5 review-platform links)
+     ============================================================ -->
+<section class="py-20 lg:py-28 bg-navy-900 relative overflow-hidden grain">
+  <div class="absolute inset-0 opacity-10" style="background: radial-gradient(ellipse at 50% 40%, #e8b84b 0%, transparent 60%);"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-3">Leave a Review</p>
+    <h2 class="font-display text-4xl lg:text-5xl text-white mb-4" style="letter-spacing:-0.03em">Share Your Experience</h2>
+    <p class="text-white/60 text-base lg:text-lg max-w-2xl mx-auto mb-10" style="line-height:1.75;">We'd love to hear from you. Whether it's feedback, a quick testimonial, or a full review — every voice helps our local business grow.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="https://www.google.com/search?sca_esv=ac5190d3317fe602&rlz=1C1GCEA_enUS1045US1045&sxsrf=AE3TifNyYPwmDfcS1WVjvAVTHilxfA8v1A:1765325388130&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ezv6tRLoCbIugUHBDFeNzGsrdBtS7QWqj32dpjoTYO2fg2WWbUefy_qNTUwS6MP-aI4JoVhTcMEiboL6PR7sTVonbmTktMZNfxjCeQ0q8SY1zp73Sg%3D%3D&q=Biviano+General+Contracting+LLC+Reviews&sa=X" target="_blank" rel="noopener" class="bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/40 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Google reviews</a>
+      <a href="https://www.yelp.com/writeareview/biz/RAs1fucNDoqnEiGtK0i4Mw?return_url=%2Fbiz%2FRAs1fucNDoqnEiGtK0i4Mw&review_origin=biz-details-war-button" target="_blank" rel="noopener" class="bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/40 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Yelp reviews</a>
+      <a href="https://www.homeadvisor.com/rated.MichealJBiviano.69654705.html" target="_blank" rel="noopener" class="bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/40 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Home Advisor reviews</a>
+      <a href="https://www.facebook.com/Bivianocontracting/" target="_blank" rel="noopener" class="bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/40 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Facebook reviews</a>
+      <a href="https://www.trex.com/find-a-builder/details/?PRO=001RN00000NhIZ9" target="_blank" rel="noopener" class="bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/40 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors duration-150">Trex reviews</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FINAL CTA — CONTACT FORM
+     ============================================================ -->
+<section id="contact" class="py-20 lg:py-28 bg-navy-950 relative overflow-hidden grain">
+  <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 80% 20%, #e8b84b 0%, transparent 55%);"></div>
+  <div class="absolute inset-0 opacity-8" style="background: radial-gradient(ellipse at 20% 80%, #e8b84b 0%, transparent 50%);"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: headline + contact info -->
+      <div class="">
+        <p class="text-gold-400/80 text-sm font-semibold tracking-widest uppercase mb-4">Free Consultation</p>
+        <h2 class="font-display text-4xl lg:text-5xl text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
+          Ready to Join Our<br/>Happy Homeowners?
+        </h2>
+        <p class="text-white/60 text-base leading-relaxed mb-10" style="line-height: 1.75;">
+          Whether you're deciding between a single project or planning something bigger — we take the worry out of home improvements from start to finish. Reach out for a free, no-pressure consultation.
+        </p>
+
+        <div class="space-y-5">
+          <a href="tel:6176786446" class="flex items-center gap-4 group">
+            <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors duration-150">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div>
+              <div class="text-white/50 text-xs font-medium uppercase tracking-wider">Call or Text</div>
+              <div class="text-white font-semibold text-base group-hover:text-gold-400 transition-colors duration-150">617-678-6446</div>
+            </div>
+          </a>
+          <a href="mailto:mbiviano@hotmail.com" class="flex items-center gap-4 group">
+            <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors duration-150">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <div class="text-white/50 text-xs font-medium uppercase tracking-wider">Email</div>
+              <div class="text-white font-semibold text-base group-hover:text-gold-400 transition-colors duration-150">mbiviano@hotmail.com</div>
+            </div>
+          </a>
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#e8b84b"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="text-white/50 text-xs font-medium uppercase tracking-wider">Office</div>
+              <div class="text-white font-semibold text-sm">2183 Ocean Street, Marshfield, MA 02050</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="bg-white rounded-2xl p-7 lg:p-8" style="box-shadow: 0 24px 60px rgba(0,0,0,0.3);">
+        <h3 class="font-display text-2xl text-navy-900 mb-1" style="letter-spacing: -0.02em;">Schedule a Free Consultation</h3>
+        <p class="text-navy-700/55 text-sm mb-6">We'll get back to you within 24 hours.</p>
+
+        <form action="#" method="post" class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">First Name</label>
+              <input type="text" name="first_name" required placeholder="John"
+                class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+            </div>
+            <div>
+              <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Last Name</label>
+              <input type="text" name="last_name" required placeholder="Smith"
+                class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+            </div>
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Phone Number</label>
+            <input type="tel" name="phone" required placeholder="(617) 555-0100"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Email Address</label>
+            <input type="email" name="email" required placeholder="john@email.com"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150" />
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Project Type</label>
+            <select name="project_type"
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150 bg-white">
+              <option value="">Select a service...</option>
+              <option>Custom Modular Home</option>
+              <option>Deck</option>
+              <option>Accessory Dwelling Unit (ADU)</option>
+              <option>Renovation &amp; Addition</option>
+              <option>Kitchen &amp; Bath</option>
+              <option>House Elevation</option>
+              <option>Small Project</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-navy-800 text-xs font-semibold uppercase tracking-wider block mb-1.5">Tell Us About Your Project</label>
+            <textarea name="message" rows="3" placeholder="Brief description of what you're looking to build or renovate..."
+              class="w-full border border-stone-200 rounded-lg px-4 py-3 text-sm text-navy-900 placeholder-navy-700/30 focus:outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-150 resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-gold w-full text-navy-950 font-bold text-base py-4 rounded-lg">
+            Get My Free Estimate →
+          </button>
+          <p class="text-navy-700/40 text-xs text-center">No commitment. No spam. We'll respond within 24 hours.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-navy-950 border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand col -->
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3 mb-5" aria-label="Biviano General Contracting Home">
+          <img src="assets/brand/favicon-dark.png" alt="Biviano General Contracting logo" class="h-10 w-10 rounded-full object-contain flex-shrink-0 bg-white/5" />
+          <div class="leading-tight">
+            <div class="text-white font-semibold text-sm tracking-wide">BIVIANO</div>
+            <div class="text-gold-400 text-xs font-medium tracking-widest uppercase">General Contracting</div>
+          </div>
+        </a>
+        <p class="text-white/45 text-sm leading-relaxed mb-5" style="line-height: 1.7;">Licensed, insured, and trusted for 40+ years. Serving Marshfield, Duxbury, Scituate, and the South Shore.</p>
+        <a href="tel:6176786446" class="text-gold-400 font-semibold text-base hover:text-gold-300 transition-colors duration-150">617-678-6446</a>
+      </div>
+
+      <!-- Pages -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Pages</h4>
         <ul class="space-y-2.5">
@@ -255,40 +546,127 @@
           <li><a href="service.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Services</a></li>
           <li><a href="testimonial.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Testimonials</a></li>
           <li><a href="finance.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Financing</a></li>
+          <li><a href="community.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Community</a></li>
+          <li><a href="roadmap.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Our Process</a></li>
+          <li><a href="blog.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Blog</a></li>
           <li><a href="contact.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Services -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h4>
         <ul class="space-y-2.5">
-          <li><a href="service-modular.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
+          <li><a href="https://bivianomodularbuilders.com" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Custom Modular Homes</a></li>
           <li><a href="service-decks.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Decks</a></li>
           <li><a href="service-adu.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">ADU</a></li>
           <li><a href="service-renovations.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Renovations &amp; Additions</a></li>
           <li><a href="service-kitchen.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Kitchen &amp; Baths</a></li>
           <li><a href="service-elevation.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">House Elevations</a></li>
+          <li><a href="service-small.html" class="text-white/50 hover:text-white text-sm transition-colors duration-150">Small Projects</a></li>
         </ul>
       </div>
+
+      <!-- Contact -->
       <div>
         <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
-        <ul class="space-y-2.5">
-          <li><a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a></li>
-          <li><a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a></li>
-          <li class="text-white/50 text-sm">2183 Ocean Street, Marshfield, MA 02050</li>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:6176786446" class="text-white/50 hover:text-white text-sm transition-colors duration-150">617-678-6446</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-0.5 flex-shrink-0"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:mbiviano@hotmail.com" class="text-white/50 hover:text-white text-sm transition-colors duration-150">mbiviano@hotmail.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8b84b" class="mt-1 flex-shrink-0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span class="text-white/50 text-sm">2183 Ocean Street<br/>Marshfield, MA 02050</span>
+          </li>
         </ul>
+
+        <!-- Review platforms -->
+        <div class="mt-6">
+          <div class="text-white/30 text-xs mb-3 uppercase tracking-wider">Find Us On</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Google</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Yelp</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">HomeAdvisor</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Facebook</span>
+            <span class="text-white/40 hover:text-white text-xs border border-white/15 hover:border-white/30 rounded px-2.5 py-1 cursor-pointer transition-colors duration-150">Trex Pro</span>
+          </div>
+        </div>
       </div>
+
     </div>
+
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
       <p class="text-white/30 text-xs">© 2025 All Rights Reserved by Biviano General Contracting</p>
       <p class="text-white/20 text-xs">Marshfield · Duxbury · Scituate · South Shore, MA</p>
     </div>
+
   </div>
 </footer>
 
+
+<!-- ============================================================
+     FLOATING MOBILE CTA (appears after scroll)
+     ============================================================ -->
+<div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-stone-200 px-4 py-3" style="box-shadow: 0 -4px 24px rgba(13,21,32,0.12);">
+  <div class="flex gap-3">
+    <a href="tel:6176786446" class="flex-1 bg-navy-900 text-white font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-2">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call Now
+    </a>
+    <a href="contact.html" class="flex-1 btn-gold text-navy-950 font-bold text-sm py-3 rounded-lg text-center">
+      Get My Free Estimate
+    </a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
+  // Sticky nav scroll class
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-  document.getElementById('menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Floating mobile CTA
+  const floatingCta = document.getElementById('floating-cta');
+  window.addEventListener('scroll', () => {
+    floatingCta.classList.toggle('show', window.scrollY > 300);
+  }, { passive: true });
+
+  // Scroll reveal (IntersectionObserver)
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  }
+
+  // Service card image scale on hover
+  document.querySelectorAll('.service-card').forEach(card => {
+    const img = card.querySelector('img');
+    if (!img) return;
+    card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
+    card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
+  });
 </script>
+
 </body>
 </html>
