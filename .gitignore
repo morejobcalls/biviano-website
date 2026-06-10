@@ -4,3 +4,5 @@ package-lock.json
 .DS_Store
 ._*
 _scrape/
+PICKUP.md
+modular-lp.html
