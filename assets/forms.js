@@ -88,14 +88,16 @@
       var label = btn ? btn.innerHTML : '';
       if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
 
-      // no-cors + text/plain = a "simple" request: no CORS preflight, so the
-      // POST reaches GHL's webhook (which sends no CORS headers). Response is
-      // opaque, so we treat a resolved fetch as success. GHL parses the JSON body.
+      // no-cors + urlencoded = a "simple" request: no CORS preflight, so the
+      // POST reaches GHL's webhook (which sends no CORS headers). MUST be
+      // x-www-form-urlencoded — GHL rejects text/plain bodies (verified
+      // 2026-06-10), and no-cors forbids application/json. Response is
+      // opaque, so we treat a resolved fetch as success.
       fetch(WEBHOOK, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: new URLSearchParams(payload).toString()
       })
       .then(function () {
         showSuccess(form);
