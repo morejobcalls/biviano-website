@@ -22,7 +22,7 @@
     var first = val(fd, 'first_name');
     var last = val(fd, 'last_name');
     var full = (val(fd, 'full_name') || (first + ' ' + last)).trim();
-    return {
+    var payload = {
       first_name: first,
       last_name: last,
       full_name: full,
@@ -34,6 +34,23 @@
       lead_source: LEAD_SOURCE,
       page_url: window.location.href
     };
+
+    // Ad attribution from assets/analytics.js — gclid/gbraid/wbraid/fbclid and
+    // utm_* captured on landing and kept for 90 days. Flat keys only: the POST
+    // below is urlencoded and cannot carry nested values. Optional by design —
+    // if analytics.js is missing or blocked, the form still submits unchanged.
+    try {
+      if (typeof window.bgcAttr === 'function') {
+        var attr = window.bgcAttr() || {};
+        for (var k in attr) {
+          if (Object.prototype.hasOwnProperty.call(attr, k) && attr[k] && !payload[k]) {
+            payload[k] = attr[k];
+          }
+        }
+      }
+    } catch (e) { /* attribution must never block a lead */ }
+
+    return payload;
   }
 
   // Inline error banner inside the form (created once, reused).
@@ -101,6 +118,12 @@
       })
       .then(function () {
         showSuccess(form);
+        // Analytics hook. Fires ONLY here — on the resolved-fetch success path —
+        // so a failed or rejected submit is never counted as a lead.
+        // assets/analytics.js listens for this and sends GA4 `generate_lead`.
+        try {
+          document.dispatchEvent(new CustomEvent('bgc:lead-success', { detail: payload }));
+        } catch (e) { /* analytics must never break the thank-you state */ }
       })
       .catch(function (err) {
         console.error('Biviano form error:', err);
