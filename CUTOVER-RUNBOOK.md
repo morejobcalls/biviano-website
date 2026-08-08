@@ -30,6 +30,8 @@ GitHub Pages publishes from the **`main`** branch. As of 2026-08-07 `main` is **
 | B2 | The 6 homepage videos (58.4 MB) exist only on the branch (commit `c6f7305`) | `.../assets/videos/set-4-hours.mp4` → **404** | The "Watch Our Work" video band renders as six broken players. |
 | B3 | The homepage "Watch Our Work" section itself is only on the branch | `git diff origin/main..HEAD -- index.html` = +67 lines | Homepage ships without the video band Mike signed off on. |
 
+| B4 | Redirect-stub coverage is **incomplete** — stubs exist for `/service/*`, `/blog/*`, `/community-involvement`, but **not** for `/about`, `/contact`, `/testimonial`, `/finance`, `/roadmap`, or the 5 `/projectdeleted*` URLs | `ls about/ contact/ testimonial/ finance/ roadmap/` → no such directories | 10 indexed live URLs — including `/contact`, the highest-intent page on the site — will land on `404.html` after cutover. Not a hard stop for the DNS work, but fix before or immediately after. Owned by the site-code agents, not this runbook. |
+
 **Clearing gate (run before §1):**
 
 ```bash
