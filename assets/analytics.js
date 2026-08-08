@@ -37,31 +37,14 @@
      CONFIG — the only block you should ever need to edit
      ═════════════════════════════════════════════════════════════════════════ */
 
-  /* ⚠️⚠️⚠️  PLACEHOLDER — NOT A REAL MEASUREMENT ID  ⚠️⚠️⚠️
-     ─────────────────────────────────────────────────────────────────────────
-     As of 2026-08-07 there is NO GA4 measurement ID anywhere in the workspace
-     that belongs to bivianocontracting.com.
-
-     What DOES exist, and why it is deliberately NOT used here:
-       · G-GW5Z0VVDEC — property "Biviano Modular Builders" (a373538036p536260258,
-         stream "BMB"). Scoped to bivianomodularbuilders.com ONLY. It is the
-         property linked to Google Ads for the BMB PPC campaigns, so pointing
-         a second domain at it would pollute the data those campaigns optimise
-         against. `../Modular/search-console-finalize.md` says so explicitly:
-         "Confirm the property selector reads Biviano Modular Builders (NOT
-         'Biviano Contracting')".
-       · A separate GC GA4 property `511231986` is referenced in
-         `PICKUP-google-leadgen-2026-06-09.md`, but that is a numeric property
-         ID — its web data stream / measurement ID was never recorded, and the
-         live GC site has never had a gtag on it, so the stream may not exist.
-
-     TO GO LIVE: create (or locate) the web data stream on the Biviano General
-     Contracting GA4 property, then swap the ONE line below. Nothing else in
-     this file — or anywhere in the site — needs to change. Until then GA4
-     collection is inert; the Ads tag, attribution capture and the GHL payload
-     all still work.                                                            */
+  /* GA4: property "Biviano Contracting" (a373538036p511231986), web stream
+     "BIVC-Website" (stream id 12507899892, url https://bivianocontracting.com).
+     Verified in the GA4 admin UI 2026-08-07 — enhanced measurement is ON.
+     NOTE: G-GW5Z0VVDEC (Biviano Modular Builders) is deliberately NOT used
+     here — it is the property linked to Google Ads for the BMB PPC campaigns,
+     and mixing a second domain in would pollute what they optimise against. */
   var GA4_PLACEHOLDER = 'G-XXXXXXXXXX';
-  var GA4_ID          = 'G-XXXXXXXXXX';   // ← swap this line, and only this line
+  var GA4_ID          = 'G-6R2ZNV4MNK';
 
   /* Google Ads tag for account "Biviano GC" 303-997-7029 — the PARENT company's
      Ads account, i.e. this site's own account. Loading it here enables gclid
