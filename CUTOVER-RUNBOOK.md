@@ -5,8 +5,10 @@ domain: bivianocontracting.com
 registrar_dns: GoDaddy (ns73/ns74.domaincontrol.com)
 target: GitHub Pages — morejobcalls/biviano-website (main / root)
 canonical: www.bivianocontracting.com
-status: READY TO EXECUTE — after blockers in §0 clear
+status: ARMED — §0 blockers CLEAR, Pages domain claimed, www TTL lowered. Only the DNS flip remains.
 verified: 2026-08-07
+ttl_lowered: 2026-08-27 07:05 ET (www CNAME 3600 → 600, value untouched)
+flip_scheduled: Tuesday 2026-09-01, 6:00 AM ET
 ---
 
 # Cutover Runbook — bivianocontracting.com
@@ -20,37 +22,30 @@ Framer → GitHub Pages. Written to be executed top to bottom with zero guesswor
 
 ---
 
-## 0. BLOCKERS — do not start the DNS work until these are true
+## 0. BLOCKERS — ✅ ALL CLEAR (re-verified 2026-08-27)
 
-GitHub Pages publishes from the **`main`** branch. As of 2026-08-07 `main` is **2 commits behind** `ui-updates-2026-06-03`, and everything that matters for the migration lives on the branch, not on `main`.
+B1–B4 were cleared on 2026-08-07. `ui-updates-2026-06-03` is merged; `main` == `origin/main`
+at `36a1bff`, no unmerged branches remain.
 
-| # | Blocker | Evidence | Consequence if cut over as-is |
-|---|---------|----------|-------------------------------|
-| B1 | The 14 legacy-URL redirect stubs exist only on `ui-updates-2026-06-03` (commit `800b78b`) | `https://morejobcalls.github.io/biviano-website/service/decks/` → **404** | Every old Framer URL Google has indexed (`/service/decks`, `/blog/...`, `/community-involvement`, …) returns 404 on launch day. Full ranking loss on the service pages. |
-| B2 | The 6 homepage videos (58.4 MB) exist only on the branch (commit `c6f7305`) | `.../assets/videos/set-4-hours.mp4` → **404** | The "Watch Our Work" video band renders as six broken players. |
-| B3 | The homepage "Watch Our Work" section itself is only on the branch | `git diff origin/main..HEAD -- index.html` = +67 lines | Homepage ships without the video band Mike signed off on. |
+Re-verified 2026-08-27 against `origin/main` (NOT the preview URL — see the note below):
 
-| B4 | Redirect-stub coverage is **incomplete** — stubs exist for `/service/*`, `/blog/*`, `/community-involvement`, but **not** for `/about`, `/contact`, `/testimonial`, `/finance`, `/roadmap`, or the 5 `/projectdeleted*` URLs | `ls about/ contact/ testimonial/ finance/ roadmap/` → no such directories | 10 indexed live URLs — including `/contact`, the highest-intent page on the site — will land on `404.html` after cutover. Not a hard stop for the DNS work, but fix before or immediately after. Owned by the site-code agents, not this runbook. |
+| Check | Result |
+|---|---|
+| 14 legacy redirect stubs (`service/*`, `blog/*`, `community-involvement`) | present on `main` |
+| 6 mp4 + 6 poster jpg in `assets/videos/` | present on `main` |
+| Homepage "Watch Our Work" band | present in `index.html` on `main` |
+| `assets/analytics.js` GA4 id | `G-6R2ZNV4MNK` ✅ (BMB's `G-GW5Z0VVDEC` appears only in a warning comment) |
+| `CNAME` file at repo root | `www.bivianocontracting.com` ✅ |
+| GitHub Pages API | `status: built`, `cname: www.bivianocontracting.com`, `build_type: legacy`, `https_enforced: false` (expected until cert) |
 
-**Clearing gate (run before §1):**
+⚠️ **The github.io preview URL is no longer usable for verification.** Because the custom
+domain is already claimed, `https://morejobcalls.github.io/biviano-website/*` now **301-redirects
+to `www.bivianocontracting.com`** — which today still resolves to Framer. The §0 curl commands
+from the original runbook therefore return `301`, not `200`, and that is CORRECT, not a failure.
+Verify content against `origin/main` with `git show origin/main:<path>` / `git ls-tree` instead.
 
-```bash
-cd "/Volumes/T7/SPG/3. FULFILLMENT/Clients/BIVIANO/07 - Websites/biviano"
-git checkout main
-git pull
-git merge ui-updates-2026-06-03
-git push origin main
-```
-
-Then confirm all three are fixed on the live preview:
-
-```bash
-B=https://morejobcalls.github.io/biviano-website
-curl -s -o /dev/null -w "stub  %{http_code}\n" $B/service/decks/
-curl -s -o /dev/null -w "video %{http_code}\n" $B/assets/videos/set-4-hours.mp4
-curl -s "$B/" | grep -c "Watch Our Work"
-```
-Expect: `stub 200`, `video 200`, and a count `>= 1`. **All three must pass before touching DNS.**
+**Step 1 of §4 (set the Pages custom domain) is ALREADY DONE** — it was completed 2026-08-07 and
+the auto-committed `CNAME` file was pulled to local `main`. Do not redo it. Skip to §4 Step 2.
 
 ---
 
@@ -114,7 +109,22 @@ Current authoritative TTLs (verified 2026-08-07 against `ns73.domaincontrol.com`
 
 `www` is the canonical host, so a stale 1-hour TTL is exactly the record you do not want caching the old Framer target during rollback. Dropping it to 600s means a bad cutover is recoverable in ~10 minutes instead of ~60.
 
-**T-24h action:** in GoDaddy, edit only the TTL field on the `www` CNAME → **600 seconds (10 min)**. Change nothing else. Then verify it propagated:
+**T-24h action:** ✅ **DONE 2026-08-27 ~07:05 ET.** In GoDaddy the `www` CNAME TTL was changed
+`1 Hora (3600)` → `Personalizado / 600`. Type, Nombre and Valor were left untouched
+(`CNAME` / `www` / `sites.framer.app.`). GoDaddy confirmed "Éxito".
+
+Verified authoritative immediately after:
+
+```
+www.bivianocontracting.com. 600  IN CNAME sites.framer.app.     ← TTL now 600 ✅
+go.bivianocontracting.com.  3600 IN CNAME sites.ludicrous.cloud. ← untouched ✅
+bivianocontracting.com.     A    31.43.160.6 / 31.43.161.6       ← untouched ✅
+TXT google-site-verification=S3zXBv72kh...egn1A                  ← untouched ✅
+https://www.bivianocontracting.com  → 200 (Framer, still live)   ✅
+https://go.bivianocontracting.com/  → 200 (funnel, still live)   ✅
+```
+
+Re-confirm on flip morning before touching anything:
 
 ```bash
 dig @ns73.domaincontrol.com www.bivianocontracting.com +noall +answer
@@ -125,7 +135,7 @@ dig @ns73.domaincontrol.com www.bivianocontracting.com +noall +answer
 
 ## 3. Recommended cutover window
 
-**Tuesday or Wednesday, 6:00–7:00 AM ET.**
+**SCHEDULED: Tuesday 2026-09-01, 6:00 AM ET.** (Runbook window: Tuesday or Wednesday, 6:00–7:00 AM ET.)
 
 Why this window:
 - **Traffic trough.** A South Shore home-improvement site gets its traffic weekday daytime and weekday evening. 6 AM local is the quietest hour that is still a workday.
@@ -142,15 +152,17 @@ Do not start if: Mike is mid-campaign on something driving traffic to the site, 
 
 Each step is ordered because of a real dependency. Do not reorder.
 
-### T-24h — Lower the `www` TTL
+### T-24h — Lower the `www` TTL — ✅ DONE 2026-08-27
 Per §2. **Why first:** TTL reductions themselves need to propagate. Lowering the TTL at cutover time does nothing — resolvers already cached the old record with the old 1-hour TTL. This must be done a full TTL cycle ahead to have any effect on rollback speed.
 
-### T-1h — Clear the §0 blockers and freeze the repo
-Merge `ui-updates-2026-06-03` → `main`, push, run the three verification curls in §0. **Why before DNS:** if you point DNS at a `main` that is missing the redirect stubs, Google starts crawling 404s immediately. Content correctness must precede traffic.
+### T-1h — Clear the §0 blockers and freeze the repo — ✅ BLOCKERS ALREADY CLEAR
+The merge is long since done (`main` == `origin/main` @ `36a1bff`). On flip morning just confirm
+`git fetch && git status -sb` shows `main...origin/main` with no divergence, and that `CNAME`
+still contains `www.bivianocontracting.com`. **Why before DNS:** if you point DNS at a `main` that is missing the redirect stubs, Google starts crawling 404s immediately. Content correctness must precede traffic.
 
 Then tell the other agents/editors: **repo freeze**. No pushes to `main` from now until §6 completes.
 
-### Step 1 — Set the GitHub Pages custom domain
+### Step 1 — Set the GitHub Pages custom domain — ✅ DONE 2026-08-07 (SKIP)
 GitHub → `morejobcalls/biviano-website` → **Settings → Pages → Custom domain** → enter `www.bivianocontracting.com` → **Save**.
 
 **Why before DNS:** setting this writes a `CNAME` file into the repo root on `main` (there is no `CNAME` file today — verified). That file is what tells GitHub's edge which repo answers for `www.bivianocontracting.com`. If DNS arrives before the repo claims the hostname, visitors get GitHub's 404 page.
