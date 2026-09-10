@@ -8,7 +8,7 @@ canonical: www.bivianocontracting.com
 status: ARMED — §0 blockers CLEAR, Pages domain claimed, www TTL lowered. Only the DNS flip remains.
 verified: 2026-08-07
 ttl_lowered: 2026-08-27 07:05 ET (www CNAME 3600 → 600, value untouched)
-flip_scheduled: Tuesday 2026-09-01, 6:00 AM ET
+flip_scheduled: Tuesday 2026-09-08, 6:00 AM ET  (rescheduled 2026-09-04 — 9/01 window passed; 9/04 attempt aborted, Friday PM is the worst window in §3)
 ---
 
 # Cutover Runbook — bivianocontracting.com
@@ -135,7 +135,7 @@ dig @ns73.domaincontrol.com www.bivianocontracting.com +noall +answer
 
 ## 3. Recommended cutover window
 
-**SCHEDULED: Tuesday 2026-09-01, 6:00 AM ET.** (Runbook window: Tuesday or Wednesday, 6:00–7:00 AM ET.)
+**SCHEDULED: Tuesday 2026-09-08, 6:00 AM ET.** (Rescheduled 2026-09-04. The 9/01 window passed unexecuted. A 9/04 attempt was pre-flighted all-green and then deliberately aborted at 16:42 ET — Friday late-afternoon violates this section on every count: not the trough, not a Tue/Wed, and a worst-case 24h cert provision would land unmonitored across the weekend. **Nothing was changed; DNS, GoDaddy and the repo were untouched.**) (Runbook window: Tuesday or Wednesday, 6:00–7:00 AM ET.)
 
 Why this window:
 - **Traffic trough.** A South Shore home-improvement site gets its traffic weekday daytime and weekday evening. 6 AM local is the quietest hour that is still a workday.

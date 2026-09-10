@@ -3,7 +3,7 @@
    Posts every .js-lead-form on the site to the Biviano GHL
    inbound webhook (location zPo4vLlEjjXCflgDSXlI).
    Flat JSON payload: first_name, last_name, full_name, phone,
-   email, project_type, message, lead_source, page_url.
+   email, project_type, address, town, message, lead_source, page_url.
    ============================================================ */
 (function () {
   'use strict';
@@ -29,6 +29,7 @@
       phone: val(fd, 'phone'),
       email: val(fd, 'email'),
       project_type: val(fd, 'project_type'),
+      address: val(fd, 'address'),
       town: val(fd, 'town'),
       message: val(fd, 'message'),
       lead_source: LEAD_SOURCE,
