@@ -21,7 +21,11 @@ const MIME = {
 };
 
 http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
+  const urlPath = decodeURIComponent(req.url.split(/[?#]/)[0]);
+  let filePath = path.join(__dirname, urlPath === '/' ? 'index.html' : urlPath);
+  // mirror GitHub Pages clean URLs: /about -> about.html, /service/decks/ -> service/decks/index.html
+  if (urlPath !== '/' && urlPath.endsWith('/')) filePath = path.join(filePath, 'index.html');
+  else if (!path.extname(filePath) && fs.existsSync(filePath + '.html')) filePath += '.html';
   const ext = path.extname(filePath);
   const contentType = MIME[ext] || 'application/octet-stream';
   fs.readFile(filePath, (err, data) => {

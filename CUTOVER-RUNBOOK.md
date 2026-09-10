@@ -5,7 +5,7 @@ domain: bivianocontracting.com
 registrar_dns: GoDaddy (ns73/ns74.domaincontrol.com)
 target: GitHub Pages — morejobcalls/biviano-website (main / root)
 canonical: www.bivianocontracting.com
-status: ARMED — §0 blockers CLEAR, Pages domain claimed, www TTL lowered. Only the DNS flip remains.
+status: LIVE — cutover executed 2026-09-10 16:43 CT, verified
 verified: 2026-08-07
 ttl_lowered: 2026-08-27 07:05 ET (www CNAME 3600 → 600, value untouched)
 flip_scheduled: Tuesday 2026-09-08, 6:00 AM ET  (rescheduled 2026-09-04 — 9/01 window passed; 9/04 attempt aborted, Friday PM is the worst window in §3)
