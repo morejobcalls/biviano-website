@@ -9,6 +9,27 @@
   'use strict';
 
   var WEBHOOK = 'https://services.leadconnectorhq.com/hooks/zPo4vLlEjjXCflgDSXlI/webhook-trigger/58030e22-679b-4dc3-832d-9156d3515f26';
+  // Anti-bot (added 2026-09-14 after ~30 gibberish submissions in 3 days):
+  // hidden honeypot field, 3s minimum time-on-page, and navigator.webdriver.
+  // Bots get the normal thank-you state but nothing is POSTed to GHL.
+  var T0 = Date.now();
+  function addHoneypot(form) {
+    if (form.querySelector('input[name="company_website"]')) { return; }
+    var w = document.createElement('div');
+    w.setAttribute('aria-hidden', 'true');
+    w.style.cssText = 'position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden';
+    w.innerHTML = '<label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>';
+    form.appendChild(w);
+  }
+  function isBot(form) {
+    try {
+      if (navigator.webdriver) { return true; }
+      var hp = form.querySelector('input[name="company_website"]');
+      if (hp && hp.value) { return true; }
+      if (Date.now() - T0 < 3000) { return true; }
+    } catch (e) { /* never block a human on a check failure */ }
+    return false;
+  }
   var LEAD_SOURCE = 'Website - bivianocontracting.com';
   var PHONE = '617-678-6446';
   var TEL = '6176786446';
@@ -93,6 +114,7 @@
       e.preventDefault();
 
       var payload = buildPayload(form);
+      if (isBot(form)) { showSuccess(form); return; }
 
       // Require name (first+last, or full) AND phone.
       var hasName = (payload.first_name && payload.last_name) || payload.full_name;
@@ -137,7 +159,7 @@
 
   function init() {
     var forms = document.querySelectorAll('.js-lead-form');
-    for (var i = 0; i < forms.length; i++) { wire(forms[i]); }
+    for (var i = 0; i < forms.length; i++) { addHoneypot(forms[i]); wire(forms[i]); }
   }
 
   if (document.readyState === 'loading') {
